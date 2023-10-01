@@ -66,6 +66,7 @@ section {
     border-right: 1px solid rgb(209, 203, 203);
 }
 
+
 .orange {
     color: orange;
 }
@@ -74,11 +75,52 @@ section {
     color: #05D087;
 }
 
+.div {
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    box-shadow: 2px 2px 2px grey;
+
+}
+
+.two-cols{
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    box-shadow: 3px 3px 3px grey;
+    margin-bottom: 20px;
+}
+
+
+.styled-input {
+    display: grid;
+}
+
+.span {
+    font-size: .8rem;
+}
+
+input{
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: .8rem;
+    border: 1px solid grey;
+}
+
+select {
+    padding: .8rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
 .white {
     background-color: white;
     border-radius: 20px;
     padding: 0px;
     border: 1px solid rgb(209, 203, 203);
+    display: none;
+    margin-bottom: 30px;
 }
 
 .orangeBcg {
@@ -88,6 +130,10 @@ section {
     border-radius: 20px;
     /* gap: 20px; */
     padding: 0px;
+}
+
+.hide {
+    display: none;
 }
 
 .orangeBcg p {
@@ -123,4 +169,62 @@ section {
 .btn button:hover {
     opacity: .8;
 }
+
+
+@media (max-width: 585px) {
+    input {
+        font-size: .8rem;
+        padding: .5rem;
+    }
+
+    select {
+        font-size: .8rem;
+        padding: .5rem;
+    }
+
+    .flex p {
+        font-size: .8rem;
+    }
+
+    .orangeBcg p{
+        font-size: .8rem;
+    }
+
+    .main-body {
+        padding: 0px;
+    }
+
+    body {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 479px) {
+    input {
+        font-size: .6rem;
+        padding: .4rem;
+    }
+
+    select {
+        font-size: .6rem;
+        padding: .4rem;
+    }
+
+    .flex p {
+        font-size: .6rem;
+    }
+
+    .orangeBcg p{
+        font-size: .6rem;
+    }
+
+    .main-body {
+        padding: 0px;
+    }
+
+    body {
+        padding: .7rem;
+    }
+}
+
 
