@@ -72,6 +72,12 @@ section {
     text-align: left;
 }
 
+.flex span {
+    border: 2px solid grey;
+    padding: 3px;
+    border-radius: 5px;
+}
+
 .orange {
     color: orange;
 }
