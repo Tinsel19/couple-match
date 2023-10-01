@@ -696,7 +696,7 @@ document.getElementById('match').addEventListener('click', ()=> {
     };
 
     // Your Maturity Number 
-    var lifePath = ((ytPNum.textContent).trim()).split('/');
+    var lifePath = ((ytLPNum.textContent).trim()).split('/');
     lpHold = Number(lifePath[lifePath.length - 1]);
     mSplit = String(lpHold).split('');
     lpHold = eval(mSplit.join('+'));
@@ -707,9 +707,13 @@ document.getElementById('match').addEventListener('click', ()=> {
     edHold = eval(mSplit.join('+'));
     
     count = lpHold + edHold;
+
+    // console.log(lpHold, edHold, count)
     mSplit = String(count).split('');
     sum = eval(mSplit.join('+'));
     sum = count;
+
+    console.log(sum)
 
     if (sum < 10) {
         ytMNum.innerHTML = sum;
@@ -988,7 +992,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         sumDayArray = xSum;
     }
 
-    console.log(sumDayArray)
+    // console.log(sumDayArray)
     if (sumDayArray === 1) {
         ptBDNum.innerHTML = '<b>1</b>';
     } else if (sumDayArray === 2) {
@@ -1421,7 +1425,7 @@ document.getElementById('match').addEventListener('click', ()=> {
     };
 
     // Partner Maturity Number 
-    var lifePath = ((ptPNum.textContent).trim()).split('/');
+    var lifePath = ((ptLPNum.textContent).trim()).split('/');
     lpHold = Number(lifePath[lifePath.length - 1]);
     mSplit = String(lpHold).split('');
     lpHold = eval(mSplit.join('+'));

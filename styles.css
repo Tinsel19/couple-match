@@ -59,13 +59,18 @@ section {
     text-underline-offset: 0.5rem;
     font-weight: bold;
     border-bottom: 1px solid whitesmoke;
+
 }
 
-.middle {
+.middle  {
     border-left:  1px solid rgb(209, 203, 203);
     border-right: 1px solid rgb(209, 203, 203);
+    text-align: center;
 }
 
+.orange-text {
+    text-align: left;
+}
 
 .orange {
     color: orange;
