@@ -1943,7 +1943,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 8   ) {
             hdComp.textContent = 'Perfect';
             hdComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptHDNum.textContent === '11/2') {
+        } else if (plnum === 5 || plnum === 6  || plnum === 7 ||  ptHDNum.textContent === '11/2') {
             hdComp.textContent = 'Good';
             hdComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
