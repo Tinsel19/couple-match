@@ -31,6 +31,12 @@ var ptPNum = document.getElementById('ptPNum');
 var ytMNum = document.getElementById('ytMNum');
 var ptMNum = document.getElementById('ptMNum');
 
+var lpComp = document.getElementById('lpComp');
+var bdComp = document.getElementById('bdComp');
+var expComp = document.getElementById('expComp');
+var hdComp = document.getElementById('hdComp');
+var pComp = document.getElementById('pComp');
+var mComp = document.getElementById('mComp');
 
 
 document.getElementById('match').addEventListener('click', ()=> {
@@ -198,7 +204,7 @@ document.getElementById('match').addEventListener('click', ()=> {
     }
     while (sum > 10) {
         if (sum === 11) {
-            ytLPNum.innerHTML = '2';
+            ytLPNum.innerHTML = '11/2';
             sum = 2;
             break
         } else if(sum === 22) {
@@ -242,6 +248,9 @@ document.getElementById('match').addEventListener('click', ()=> {
         sumDayArray = '7';
     } else if (xSum === 19) {
         sumDayArray = '1';
+    } else if (xSum === 11) {
+        sumDayArray = '11/2';
+        xSum = '11/2'
     } else if (xSum > 10) {
         mSplit = String(xSum).split('');
         xSum = eval(mSplit.join('+'));
@@ -258,12 +267,16 @@ document.getElementById('match').addEventListener('click', ()=> {
             xSum = '7';
         } else if (xSum === 19) {
             xSum = '1';
+        } else if (xSum === 11) {
+            xSum = '11/2';
         } else if (xSum > 10) {
             mSplit = String(xSum).split('');
             xSum = eval(mSplit.join('+'));
         };
         sumDayArray = xSum;
-    }
+    };
+    sumDayArray = Number(sumDayArray);
+    console.log(sumDayArray)
     if (sumDayArray === 1) {
         ytBDNum.innerHTML = '<b>1</b>';
     } else if (sumDayArray === 2) {
@@ -282,16 +295,9 @@ document.getElementById('match').addEventListener('click', ()=> {
         ytBDNum.innerHTML = '<b>8</b>';
     } else if (sumDayArray === 9) {
         ytBDNum.innerHTML = '<b>9</b>';
-    } else if (sumDayArray === '13/4') {
-        ytBDNum.innerHTML =  '<b>4</b>';
-    } else if (sumDayArray === '14/5') {
-        ytBDNum.innerHTML = '<b>5</b>';
-    } else if (sumDayArray === '16/7') {
-        ytBDNum.innerHTML = '<b>7</b>';
-    } else if (sumDayArray === '19/1') {
-        ytBDNum.innerHTML = '<b>1</b>';
-    };
-
+    } else if (xSum === '11/2')  {
+        ytBDNum.innerHTML =  '<b>11/2</b>';
+    } 
 
     // expression / destiny number 
     var ednfName = yfName.value.split(' ');
@@ -353,7 +359,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         dbTotalSum = 10;
         nSum = 1;
     } else if (countHold === 11) {
-        dbTotalSum = 11;
+        dbTotalSum = '11/2';
         nSum = 2
     } else if (countHold === 22) {
         dbTotalSum = 22;
@@ -372,7 +378,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             dbTotalSum = 10;
             nSum = 1;
         } else if (nSum === 11) {
-            dbTotalSum = 11;
+            dbTotalSum = '11/2';
             nSum = 2;
         } else if (nSum === 22) {
             dbTotalSum = 22;
@@ -391,7 +397,7 @@ document.getElementById('match').addEventListener('click', ()=> {
                 dbTotalSum = 10;
                 nSum = 1;
             } else if (nSum === 11) {
-                dbTotalSum = 11;
+                dbTotalSum = '11/2';
                 nSum = 2;
             } else if (nSum === 22) {
                 dbTotalSum = 22;
@@ -408,8 +414,8 @@ document.getElementById('match').addEventListener('click', ()=> {
     }
     if (dbTotalSum === 10) {
         ytEPNum.innerHTML = '<b>1</b>' ;
-    } else if (dbTotalSum === 19) {
-        ytEPNum.innerHTML = '<b>1</b>';
+    } else if (dbTotalSum === '11/2') {
+        ytEPNum.innerHTML = '<b>11/2</b>';
     } else if (dbTotalSum === 28) {
         ytEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 37) {
@@ -491,7 +497,7 @@ document.getElementById('match').addEventListener('click', ()=> {
     } else if (countHold === 11) {
         dbTotalSum = 11;
         nSum = 2
-        ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+        ytHDNum.innerHTML = '<b>11/2</b>';
     } else if (countHold === 22) {
         dbTotalSum = 22;
         nSum = 4
@@ -515,7 +521,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         } else if (nSum === 11) {
             dbTotalSum = 11;
             nSum = 2;
-            ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+            ytHDNum.innerHTML = '<b>11/2</b>';
         } else if (nSum === 22) {
             dbTotalSum = 22;
             nSum = 4;
@@ -541,7 +547,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             } else if (nSum === 11) {
                 dbTotalSum = 11;
                 nSum = 2;
-                ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+                ytHDNum.innerHTML = '<b>11/2</b>';
             } else if (nSum === 22) {
                 dbTotalSum = 22;
                 nSum = 4;
@@ -633,7 +639,11 @@ document.getElementById('match').addEventListener('click', ()=> {
     } else if (count == 10) {
         count = 1;
         ytPNum.innerHTML = '<b>1</b>' ;
-    } else if (count === 11 || count === 22 || count === 33) {
+    } else if ( count === 11) {
+        count = 13;
+        sum = 4;
+        ytPNum.innerHTML = '<b>11/2</b>' ;
+    } else if ( count === 22 || count === 33) {
         count;
         pnSplit = String(count).split('');
         sum = eval(pnSplit.join('+'));
@@ -666,7 +676,11 @@ document.getElementById('match').addEventListener('click', ()=> {
         } else if (count == 10) {
             count = 1;
             ytPNum.innerHTML = '<b>1</b>' ;
-        } else if (count === 11 || count === 22 || count === 33) {
+        } else if ( count === 11) {
+            count = 13;
+            sum = 4;
+            ytPNum.innerHTML = '<b>11/2</b>' ;
+        } else if (count === 22 || count === 33) {
             count;
             pnSplit = String(count).split('');
             sum = eval(pnSplit.join('+'));
@@ -713,14 +727,14 @@ document.getElementById('match').addEventListener('click', ()=> {
     sum = eval(mSplit.join('+'));
     sum = count;
 
-    console.log(sum)
+    // console.log(sum)
 
     if (sum < 10) {
         ytMNum.innerHTML = sum;
     } else if (sum === 10) {
         ytMNum.innerHTML = 1;
     } else if (sum === 11) {
-        ytMNum.innerHTML = '2';
+        ytMNum.innerHTML = '11/2';
     } else if (sum === 22) {
         ytMNum.innerHTML = '4';
     } else if (sum === 33) {
@@ -733,7 +747,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         } else if (sum === 10) {
             sum  = 1;
         } else if (sum === 11) {
-            sum = '2'
+            sum = '11/2'
         } else if (sum === 22) {
             sum = '4'
         } else if (sum === 33) {
@@ -747,7 +761,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             } else if (sum === 10) {
                 sum  = 1;
             } else if (sum === 11) {
-                sum = '2'
+                sum = '11/2'
             } else if (sum === 22) {
                 sum = '4'
             } else if (sum === 33) {
@@ -925,7 +939,7 @@ document.getElementById('match').addEventListener('click', ()=> {
     }
     while (sum > 10) {
         if (sum === 11) {
-         ptLPNum.innerHTML = '2';
+         ptLPNum.innerHTML = '11/2';
             sum = 2;
             break
         } else if(sum === 22) {
@@ -967,6 +981,8 @@ document.getElementById('match').addEventListener('click', ()=> {
         sumDayArray = '5';
     }else if (xSum === 16) {
         sumDayArray = '7';
+    } else if (xSum === 11) {
+        sumDayArray = '11/2';
     } else if (xSum === 19) {
         sumDayArray = '1';
     } else if (xSum > 10) {
@@ -977,6 +993,8 @@ document.getElementById('match').addEventListener('click', ()=> {
             xSum
         } else if (xSum === 10) {
             xSum = 1
+        } else if (xSum === 11) {
+            xSum = '11/2'
         } else if (xSum === 13) {
             xSum = '4';
         } else if (xSum === 14) {
@@ -1011,8 +1029,8 @@ document.getElementById('match').addEventListener('click', ()=> {
         ptBDNum.innerHTML = '<b>8</b>';
     } else if (sumDayArray === 9) {
         ptBDNum.innerHTML = '<b>9</b>';
-    } else if (sumDayArray === '13/4') {
-        ptBDNum.innerHTML =  '<b>4</b>';
+    } else if (sumDayArray === '11/2') {
+        ptBDNum.innerHTML =  '<b>11/2</b>';
     } else if (sumDayArray === '14/5') {
         ptBDNum.innerHTML = '<b>5</b>';
     } else if (sumDayArray === '16/7') {
@@ -1082,7 +1100,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         dbTotalSum = 10;
         nSum = 1;
     } else if (countHold === 11) {
-        dbTotalSum = 11;
+        dbTotalSum = '11/2';
         nSum = 2
     } else if (countHold === 22) {
         dbTotalSum = 22;
@@ -1101,7 +1119,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             dbTotalSum = 10;
             nSum = 1;
         } else if (nSum === 11) {
-            dbTotalSum = 11;
+            dbTotalSum = '11/2';
             nSum = 2;
         } else if (nSum === 22) {
             dbTotalSum = 22;
@@ -1120,7 +1138,7 @@ document.getElementById('match').addEventListener('click', ()=> {
                 dbTotalSum = 10;
                 nSum = 1;
             } else if (nSum === 11) {
-                dbTotalSum = 11;
+                dbTotalSum = '11/2';
                 nSum = 2;
             } else if (nSum === 22) {
                 dbTotalSum = 22;
@@ -1153,8 +1171,8 @@ document.getElementById('match').addEventListener('click', ()=> {
         ptEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 82) {
         ptEPNum.innerHTML = '<b>1</b>';
-    } else if (dbTotalSum === 91) {
-        ptEPNum.innerHTML = '<b>1</b>';
+    } else if (dbTotalSum === '11/2') {
+        ptEPNum.innerHTML = '<b>11/2</b>';
     }
     else {
         ptEPNum.innerHTML = '<b>' + nSum + '</b>';
@@ -1218,9 +1236,9 @@ document.getElementById('match').addEventListener('click', ()=> {
         nSum = 1;
         ptHDNum.innerHTML = '<b>' + nSum + '</b>';
     } else if (countHold === 11) {
-        dbTotalSum = 11;
+        dbTotalSum = '11/2';
         nSum = 2
-        ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+        ptHDNum.innerHTML = '<b>11/2</b>';
     } else if (countHold === 22) {
         dbTotalSum = 22;
         nSum = 4
@@ -1242,9 +1260,9 @@ document.getElementById('match').addEventListener('click', ()=> {
             nSum = 1;
             ptHDNum.innerHTML = '<b>' + nSum + '</b>';
         } else if (nSum === 11) {
-            dbTotalSum = 11;
+            dbTotalSum = '11/2';
             nSum = 2;
-            ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+            ptHDNum.innerHTML = '<b>11/2</b>';
         } else if (nSum === 22) {
             dbTotalSum = 22;
             nSum = 4;
@@ -1270,7 +1288,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             } else if (nSum === 11) {
                 dbTotalSum = 11;
                 nSum = 2;
-                ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+                ptHDNum.innerHTML = '<b>11/2</b>';
             } else if (nSum === 22) {
                 dbTotalSum = 22;
                 nSum = 4;
@@ -1362,7 +1380,10 @@ document.getElementById('match').addEventListener('click', ()=> {
     } else if (count == 10) {
         count = 1;
         ptPNum.innerHTML = '<b>1</b>' ;
-    } else if (count === 11 || count === 22 || count === 33) {
+    } else if (count == 11) {
+        count = 11;
+        ptPNum.innerHTML = '<b>11/2</b>' ;
+    }  else if ( count === 22 || count === 33) {
         count;
         pnSplit = String(count).split('');
         sum = eval(pnSplit.join('+'));
@@ -1395,6 +1416,9 @@ document.getElementById('match').addEventListener('click', ()=> {
         } else if (count == 10) {
             count = 1;
             ptPNum.innerHTML = '<b>1</b>' ;
+        } else if (count == 11) {
+            count = 1;
+            ptPNum.innerHTML = '<b>11/2</b>' ;
         } else if (count === 11 || count === 22 || count === 33) {
             count;
             pnSplit = String(count).split('');
@@ -1445,7 +1469,7 @@ document.getElementById('match').addEventListener('click', ()=> {
     } else if (sum === 10) {
         ptMNum.innerHTML = 1;
     } else if (sum === 11) {
-        ptMNum.innerHTML = '2';
+        ptMNum.innerHTML = '11/2';
     } else if (sum === 22) {
         ptMNum.innerHTML = '4';
     } else if (sum === 33) {
@@ -1458,7 +1482,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         } else if (sum === 10) {
             sum  = 1;
         } else if (sum === 11) {
-            sum = '2'
+            sum = '11/2'
         } else if (sum === 22) {
             sum = '4'
         } else if (sum === 33) {
@@ -1483,5 +1507,703 @@ document.getElementById('match').addEventListener('click', ()=> {
             }
         }
         ptMNum.innerHTML = sum;
-    }
+    };
+
+
+    // lifePath 1 comparism #F27121
+    var ylpnum = Number(ytLPNum.textContent);
+    var plnum = Number(ptLPNum.textContent);
+
+    if (ylpnum === 1) {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9 || ptLPNum.textContent === '11/2') {
+            lpComp.textContent = 'Perfect';
+            lpComp.style.color = '#05D087'
+        } else if (plnum === 2 || plnum === 6 ) {
+            lpComp.textContent = 'Good';
+            lpComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 ) {
+            lpComp.textContent = 'Challenge';
+            lpComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 2) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptLPNum.textContent === '11/2') {
+            lpComp.textContent = 'Perfect';
+            lpComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            lpComp.textContent = 'Good';
+            lpComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            lpComp.textContent = 'Challenge';
+            lpComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 3) {
+        if (plnum === 3 || plnum === 6 || plnum === 9 || ptLPNum.textContent === '11/2' ) {
+            lpComp.textContent = 'Perfect';
+            lpComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
+            lpComp.textContent = 'Good';
+            lpComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 ) {
+            lpComp.textContent = 'Challenge';
+            lpComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 4) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptLPNum.textContent === '11/2' ) {
+            lpComp.textContent = 'Perfect';
+            lpComp.style.color = '#05D087'
+        } else if (plnum === 7 ) {
+            lpComp.textContent = 'Good';
+            lpComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
+            lpComp.textContent = 'Challenge';
+            lpComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 5) {
+        if (plnum === 1 || plnum === 5 || plnum === 7  || ptLPNum.textContent === '11/2' ) {
+            lpComp.textContent = 'Perfect';
+            lpComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
+            lpComp.textContent = 'Good';
+            lpComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
+            lpComp.textContent = 'Challenge';
+            lpComp.style.color = '#F27121'
+        } 
+    }  else if (ylpnum === 6) {
+        if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9 || ptLPNum.textContent === '11/2' ) {
+            lpComp.textContent = 'Perfect';
+            lpComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 8  ) {
+            lpComp.textContent = 'Good';
+            lpComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            lpComp.textContent = 'Challenge';
+            lpComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 7) {
+        if (plnum === 1 || plnum === 5 || plnum === 7  || ptLPNum.textContent === '11/2') {
+            lpComp.textContent = 'Perfect';
+            lpComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
+            lpComp.textContent = 'Good';
+            lpComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 6 ) {
+            lpComp.textContent = 'Challenge';
+            lpComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 8) {
+        if (plnum === 2 || plnum === 4 || plnum === 8 || ptLPNum.textContent === '11/2') {
+            lpComp.textContent = 'Perfect';
+            lpComp.style.color = '#05D087'
+        } else if (plnum === 5 || plnum === 6 || plnum === 8) {
+            lpComp.textContent = 'Good';
+            lpComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            lpComp.textContent = 'Challenge';
+            lpComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 9) {
+        if (plnum === 3 || plnum === 6 || plnum === 9 || ptLPNum.textContent === '11/2') {
+            lpComp.textContent = 'Perfect';
+            lpComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 5 || plnum === 7) {
+            lpComp.textContent = 'Good';
+            lpComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
+            lpComp.textContent = 'Challenge';
+            lpComp.style.color = '#F27121'
+        } 
+    } else if (ytLPNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptLPNum.textContent === '11/2') {
+            lpComp.textContent = 'Perfect';
+            lpComp.style.color = '#05D087'
+        } else if (plnum === 4 || plnum === 6 || plnum === 8) {
+            lpComp.textContent = 'Good';
+            lpComp.style.color = 'yellow'
+        } else if (plnum === 3 ) {
+            lpComp.textContent = 'Challenge';
+            lpComp.style.color = '#F27121'
+        } 
+    };
+
+    // Birthday Comparism 
+    var ylpnum = Number(ytBDNum.textContent);
+    var plnum = Number(ptBDNum.textContent);
+
+    if (ylpnum === 1) {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9 || ptBDNum.textContent === '11/2') {
+            bdComp.textContent = 'Perfect';
+            bdComp.style.color = '#05D087'
+        } else if (plnum === 2 || plnum === 6 ) {
+            bdComp.textContent = 'Good';
+            bdComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 ) {
+            bdComp.textContent = 'Challenge';
+            bdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 2) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptBDNum.textContent === '11/2') {
+            bdComp.textContent = 'Perfect';
+            bdComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            bdComp.textContent = 'Good';
+            bdComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            bdComp.textContent = 'Challenge';
+            bdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 3) {
+        if (plnum === 3 || plnum === 6 || plnum === 9 ) {
+            bdComp.textContent = 'Perfect';
+            bdComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
+            bdComp.textContent = 'Good';
+            bdComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 || ptBDNum.textContent === '11/2' ) {
+            bdComp.textContent = 'Challenge';
+            bdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 4) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 ) {
+            bdComp.textContent = 'Perfect';
+            bdComp.style.color = '#05D087'
+        } else if (plnum === 7 || ptBDNum.textContent === '11/2' ) {
+            bdComp.textContent = 'Good';
+            bdComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
+            bdComp.textContent = 'Challenge';
+            bdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 5) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || ptBDNum.textContent === '11/2' ) {
+            bdComp.textContent = 'Perfect';
+            bdComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
+            bdComp.textContent = 'Good';
+            bdComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
+            bdComp.textContent = 'Challenge';
+            bdComp.style.color = '#F27121'
+        } 
+    }  else if (ylpnum === 6) {
+        if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9 ) {
+            bdComp.textContent = 'Perfect';
+            bdComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 8  || ptBDNum.textContent === '11/2' ) {
+            bdComp.textContent = 'Good';
+            bdComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            bdComp.textContent = 'Challenge';
+            bdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 7) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || ptBDNum.textContent === '11/2' ) {
+            bdComp.textContent = 'Perfect';
+            bdComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
+            bdComp.textContent = 'Good';
+            bdComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 6 ) {
+            bdComp.textContent = 'Challenge';
+            bdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 8) {
+        if (plnum === 2 || plnum === 4 || plnum === 8 ) {
+            bdComp.textContent = 'Perfect';
+            bdComp.style.color = '#05D087'
+        } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptBDNum.textContent === '11/2') {
+            bdComp.textContent = 'Good';
+            bdComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            bdComp.textContent = 'Challenge';
+            bdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 9) {
+        if (plnum === 3 || plnum === 6 || plnum === 9 || ptBDNum.textContent === '11/2') {
+            bdComp.textContent = 'Perfect';
+            bdComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 5 || plnum === 7) {
+            bdComp.textContent = 'Good';
+            bdComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
+            bdComp.textContent = 'Challenge';
+            bdComp.style.color = '#F27121'
+        } 
+    } else if (ytBDNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptBDNum.textContent === '11/2') {
+            bdComp.textContent = 'Perfect';
+            bdComp.style.color = '#05D087'
+        } else if (plnum === 4 || plnum === 6 || plnum === 8) {
+            bdComp.textContent = 'Good';
+            bdComp.style.color = 'yellow'
+        } else if (plnum === 3 ) {
+            bdComp.textContent = 'Challenge';
+            bdComp.style.color = '#F27121'
+        } 
+    };
+
+    // Expression Compatiility 
+    var ylpnum = Number(ytEPNum.textContent);
+    var plnum = Number(ptEPNum.textContent);
+
+    if (ylpnum === 1) {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9 || ptEPNum.textContent === '11/2') {
+            expComp.textContent = 'Perfect';
+            expComp.style.color = '#05D087'
+        } else if (plnum === 2 || plnum === 6 ) {
+            expComp.textContent = 'Good';
+            expComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 ) {
+            expComp.textContent = 'Challenge';
+            expComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 2) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptEPNum.textContent === '11/2') {
+            expComp.textContent = 'Perfect';
+            expComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            expComp.textContent = 'Good';
+            expComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            expComp.textContent = 'Challenge';
+            expComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 3) {
+        if (plnum === 3 || plnum === 6 || plnum === 9 ) {
+            expComp.textContent = 'Perfect';
+            expComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
+            expComp.textContent = 'Good';
+            expComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 || ptEPNum.textContent === '11/2') {
+            expComp.textContent = 'Challenge';
+            expComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 4) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 ) {
+            expComp.textContent = 'Perfect';
+            expComp.style.color = '#05D087'
+        } else if (plnum === 7 || ptEPNum.textContent === '11/2') {
+            expComp.textContent = 'Good';
+            expComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
+            expComp.textContent = 'Challenge';
+            expComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 5) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || ptEPNum.textContent === '11/2' ) {
+            expComp.textContent = 'Perfect';
+            expComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
+            expComp.textContent = 'Good';
+            expComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
+            expComp.textContent = 'Challenge';
+            expComp.style.color = '#F27121'
+        } 
+    }  else if (ylpnum === 6) {
+        if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9 ) {
+            expComp.textContent = 'Perfect';
+            expComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 8 || ptEPNum.textContent === '11/2' ) {
+            expComp.textContent = 'Good';
+            expComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            expComp.textContent = 'Challenge';
+            expComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 7) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || ptEPNum.textContent === '11/2' ) {
+            expComp.textContent = 'Perfect';
+            expComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
+            expComp.textContent = 'Good';
+            expComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 6 ) {
+            expComp.textContent = 'Challenge';
+            expComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 8) {
+        if (plnum === 2 || plnum === 4 || plnum === 8 ) {
+            expComp.textContent = 'Perfect';
+            expComp.style.color = '#05D087'
+        } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptEPNum.textContent === '11/2') {
+            expComp.textContent = 'Good';
+            expComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            expComp.textContent = 'Challenge';
+            expComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 9) {
+        if (plnum === 3 || plnum === 6 || plnum === 9 || ptEPNum.textContent === '11/2') {
+            expComp.textContent = 'Perfect';
+            expComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 5 || plnum === 7) {
+            expComp.textContent = 'Good';
+            expComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
+            expComp.textContent = 'Challenge';
+            expComp.style.color = '#F27121'
+        } 
+    } else if (ytEPNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptEPNum.textContent === '11/2') {
+            expComp.textContent = 'Perfect';
+            expComp.style.color = '#05D087'
+        } else if (plnum === 4 || plnum === 6 || plnum === 8) {
+            expComp.textContent = 'Good';
+            expComp.style.color = 'yellow'
+        } else if (plnum === 3 ) {
+            expComp.textContent = 'Challenge';
+            expComp.style.color = '#F27121'
+        } 
+    };
+
+    // Heart's desire Compatibility 
+    var ylpnum = Number(ytHDNum.textContent);
+    var plnum = Number(ptHDNum.textContent);
+
+    if (ylpnum === 1) {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9  || ptHDNum.textContent === '11/2') {
+            hdComp.textContent = 'Perfect';
+            hdComp.style.color = '#05D087'
+        } else if (plnum === 2 || plnum === 6 ) {
+            hdComp.textContent = 'Good';
+            hdComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 ) {
+            hdComp.textContent = 'Challenge';
+            hdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 2) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8  || ptHDNum.textContent === '11/2') {
+            hdComp.textContent = 'Perfect';
+            hdComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            hdComp.textContent = 'Good';
+            hdComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            hdComp.textContent = 'Challenge';
+            hdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 3) {
+        if (plnum === 3 || plnum === 6 || plnum === 9  ) {
+            hdComp.textContent = 'Perfect';
+            hdComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
+            hdComp.textContent = 'Good';
+            hdComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 || ptHDNum.textContent === '11/2' ) {
+            hdComp.textContent = 'Challenge';
+            hdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 4) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8  ) {
+            hdComp.textContent = 'Perfect';
+            hdComp.style.color = '#05D087'
+        } else if (plnum === 7 || ptHDNum.textContent === '11/2') {
+            hdComp.textContent = 'Good';
+            hdComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
+            hdComp.textContent = 'Challenge';
+            hdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 5) {
+        if (plnum === 1 || plnum === 5 || plnum === 7  || ptHDNum.textContent === '11/2' ) {
+            hdComp.textContent = 'Perfect';
+            hdComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
+            hdComp.textContent = 'Good';
+            hdComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
+            hdComp.textContent = 'Challenge';
+            hdComp.style.color = '#F27121'
+        } 
+    }  else if (ylpnum === 6) {
+        if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9  ) {
+            hdComp.textContent = 'Perfect';
+            hdComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 8 || ptHDNum.textContent === '11/2' ) {
+            hdComp.textContent = 'Good';
+            hdComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            hdComp.textContent = 'Challenge';
+            hdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 7) {
+        if (plnum === 1 || plnum === 5 || plnum === 7   || ptHDNum.textContent === '11/2') {
+            hdComp.textContent = 'Perfect';
+            hdComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
+            hdComp.textContent = 'Good';
+            hdComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 6 ) {
+            hdComp.textContent = 'Challenge';
+            hdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 8) {
+        if (plnum === 2 || plnum === 4 || plnum === 8   ) {
+            hdComp.textContent = 'Perfect';
+            hdComp.style.color = '#05D087'
+        } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptHDNum.textContent === '11/2') {
+            hdComp.textContent = 'Good';
+            hdComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            hdComp.textContent = 'Challenge';
+            hdComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 9) {
+        if (plnum === 3 || plnum === 6 || plnum === 9  || ptHDNum.textContent === '11/2') {
+            hdComp.textContent = 'Perfect';
+            hdComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 5 || plnum === 7) {
+            hdComp.textContent = 'Good';
+            hdComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
+            hdComp.textContent = 'Challenge';
+            hdComp.style.color = '#F27121'
+        } 
+    } else if (ytHDNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptHDNum.textContent === '11/2') {
+            hdComp.textContent = 'Perfect';
+            hdComp.style.color = '#05D087'
+        } else if (plnum === 4 || plnum === 6 || plnum === 8) {
+            hdComp.textContent = 'Good';
+            hdComp.style.color = 'yellow'
+        } else if (plnum === 3 ) {
+            hdComp.textContent = 'Challenge';
+            hdComp.style.color = '#F27121'
+        } 
+    };
+
+    // Personality Compatibilty 
+    var ylpnum = Number(ytPNum.textContent);
+    var plnum = Number(ptPNum.textContent);
+
+    if (ylpnum === 1) {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9 || ptPNum.textContent === '11/2') {
+            pComp.textContent = 'Perfect';
+            pComp.style.color = '#05D087'
+        } else if (plnum === 2 || plnum === 6 ) {
+            pComp.textContent = 'Good';
+            pComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 ) {
+            pComp.textContent = 'Challenge';
+            pComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 2) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptPNum.textContent === '11/2') {
+            pComp.textContent = 'Perfect';
+            pComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            pComp.textContent = 'Good';
+            pComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            pComp.textContent = 'Challenge';
+            pComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 3) {
+        if (plnum === 3 || plnum === 6 || plnum === 9 ) {
+            pComp.textContent = 'Perfect';
+            pComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
+            pComp.textContent = 'Good';
+            pComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 || ptPNum.textContent === '11/2') {
+            pComp.textContent = 'Challenge';
+            pComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 4) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 ) {
+            pComp.textContent = 'Perfect';
+            pComp.style.color = '#05D087'
+        } else if (plnum === 7 || ptPNum.textContent === '11/2' ) {
+            pComp.textContent = 'Good';
+            pComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
+            pComp.textContent = 'Challenge';
+            pComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 5) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || ptPNum.textContent === '11/2' ) {
+            pComp.textContent = 'Perfect';
+            pComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
+            pComp.textContent = 'Good';
+            pComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
+            pComp.textContent = 'Challenge';
+            pComp.style.color = '#F27121'
+        } 
+    }  else if (ylpnum === 6) {
+        if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9 ) {
+            pComp.textContent = 'Perfect';
+            pComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 8  || ptPNum.textContent === '11/2') {
+            pComp.textContent = 'Good';
+            pComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            pComp.textContent = 'Challenge';
+            pComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 7) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || ptPNum.textContent === '11/2' ) {
+            pComp.textContent = 'Perfect';
+            pComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
+            pComp.textContent = 'Good';
+            pComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 6 ) {
+            pComp.textContent = 'Challenge';
+            pComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 8) {
+        if (plnum === 2 || plnum === 4 || plnum === 8 ) {
+            pComp.textContent = 'Perfect';
+            pComp.style.color = '#05D087'
+        } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptPNum.textContent === '11/2') {
+            pComp.textContent = 'Good';
+            pComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            pComp.textContent = 'Challenge';
+            pComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 9) {
+        if (plnum === 3 || plnum === 6 || plnum === 9 || ptPNum.textContent === '11/2') {
+            pComp.textContent = 'Perfect';
+            pComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 5 || plnum === 7) {
+            pComp.textContent = 'Good';
+            pComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
+            pComp.textContent = 'Challenge';
+            pComp.style.color = '#F27121'
+        } 
+    } else if (ytPNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptPNum.textContent === '11/2') {
+            pComp.textContent = 'Perfect';
+            pComp.style.color = '#05D087'
+        } else if (plnum === 4 || plnum === 6 || plnum === 8) {
+            pComp.textContent = 'Good';
+            pComp.style.color = 'yellow'
+        } else if (plnum === 3 ) {
+            pComp.textContent = 'Challenge';
+            pComp.style.color = '#F27121'
+        } 
+    };
+
+    // Maturity Compatibility 
+    var ylpnum = Number(ytMNum.textContent);
+    var plnum = Number(ptMNum.textContent);
+
+    if (ylpnum === 1) {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9 || ptMNum.textContent === '11/2') {
+            mComp.textContent = 'Perfect';
+            mComp.style.color = '#05D087'
+        } else if (plnum === 2 || plnum === 6 ) {
+            mComp.textContent = 'Good';
+            mComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 ) {
+            mComp.textContent = 'Challenge';
+            mComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 2) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptMNum.textContent === '11/2' ) {
+            mComp.textContent = 'Perfect';
+            mComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            mComp.textContent = 'Good';
+            mComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            mComp.textContent = 'Challenge';
+            mComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 3) {
+        if (plnum === 3 || plnum === 6 || plnum === 9  ) {
+            mComp.textContent = 'Perfect';
+            mComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
+            mComp.textContent = 'Good';
+            mComp.style.color = 'yellow'
+        } else if (plnum === 4 || plnum === 8 || ptMNum.textContent === '11/2') {
+            mComp.textContent = 'Challenge';
+            mComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 4) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 ) {
+            mComp.textContent = 'Perfect';
+            mComp.style.color = '#05D087'
+        } else if (plnum === 7 || ptMNum.textContent === '11/2') {
+            mComp.textContent = 'Good';
+            mComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
+            mComp.textContent = 'Challenge';
+            mComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 5) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || ptMNum.textContent === '11/2' ) {
+            mComp.textContent = 'Perfect';
+            mComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
+            mComp.textContent = 'Good';
+            mComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
+            mComp.textContent = 'Challenge';
+            mComp.style.color = '#F27121'
+        } 
+    }  else if (ylpnum === 6) {
+        if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9  ) {
+            mComp.textContent = 'Perfect';
+            mComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 8 || ptMNum.textContent === '11/2' ) {
+            mComp.textContent = 'Good';
+            mComp.style.color = 'yellow'
+        } else if (plnum === 5 || plnum === 7 ) {
+            mComp.textContent = 'Challenge';
+            mComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 7) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || ptMNum.textContent === '11/2' ) {
+            mComp.textContent = 'Perfect';
+            mComp.style.color = '#05D087'
+        } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
+            mComp.textContent = 'Good';
+            mComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 6 ) {
+            mComp.textContent = 'Challenge';
+            mComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 8) {
+        if (plnum === 2 || plnum === 4 || plnum === 8 ) {
+            mComp.textContent = 'Perfect';
+            mComp.style.color = '#05D087'
+        } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptMNum.textContent === '11/2') {
+            mComp.textContent = 'Good';
+            mComp.style.color = 'yellow'
+        } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
+            mComp.textContent = 'Challenge';
+            mComp.style.color = '#F27121'
+        } 
+    } else if (ylpnum === 9) {
+        if (plnum === 3 || plnum === 6 || plnum === 9 || ptMNum.textContent === '11/2') {
+            mComp.textContent = 'Perfect';
+            mComp.style.color = '#05D087'
+        } else if (plnum === 1 || plnum === 5 || plnum === 7) {
+            mComp.textContent = 'Good';
+            mComp.style.color = 'yellow'
+        } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
+            mComp.textContent = 'Challenge';
+            mComp.style.color = '#F27121'
+        } 
+    } else if (ytMNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptMNum.textContent === '11/2') {
+            mComp.textContent = 'Perfect';
+            mComp.style.color = '#05D087'
+        } else if (plnum === 4 || plnum === 6 || plnum === 8) {
+            mComp.textContent = 'Good';
+            mComp.style.color = 'yellow'
+        } else if (plnum === 3 ) {
+            mComp.textContent = 'Challenge';
+            mComp.style.color = '#F27121'
+        } 
+    };
+
 })
