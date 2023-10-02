@@ -1520,7 +1520,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#05D087'
         } else if (plnum === 2 || plnum === 6 ) {
             lpComp.textContent = 'Good';
-            lpComp.style.color = 'yellow'
+            lpComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
@@ -1531,7 +1531,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             lpComp.textContent = 'Good';
-            lpComp.style.color = 'yellow'
+            lpComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
@@ -1542,7 +1542,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             lpComp.textContent = 'Good';
-            lpComp.style.color = 'yellow'
+            lpComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
@@ -1553,7 +1553,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#05D087'
         } else if (plnum === 7 ) {
             lpComp.textContent = 'Good';
-            lpComp.style.color = 'yellow'
+            lpComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
@@ -1564,7 +1564,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
             lpComp.textContent = 'Good';
-            lpComp.style.color = 'yellow'
+            lpComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
@@ -1575,7 +1575,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 8  ) {
             lpComp.textContent = 'Good';
-            lpComp.style.color = 'yellow'
+            lpComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
@@ -1586,7 +1586,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
             lpComp.textContent = 'Good';
-            lpComp.style.color = 'yellow'
+            lpComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 6 ) {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
@@ -1597,7 +1597,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#05D087'
         } else if (plnum === 5 || plnum === 6 || plnum === 8) {
             lpComp.textContent = 'Good';
-            lpComp.style.color = 'yellow'
+            lpComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
@@ -1608,7 +1608,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
             lpComp.textContent = 'Good';
-            lpComp.style.color = 'yellow'
+            lpComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
@@ -1619,7 +1619,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#05D087'
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
             lpComp.textContent = 'Good';
-            lpComp.style.color = 'yellow'
+            lpComp.style.color = '#F8DE22'
         } else if (plnum === 3 ) {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
@@ -1636,7 +1636,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#05D087'
         } else if (plnum === 2 || plnum === 6 ) {
             bdComp.textContent = 'Good';
-            bdComp.style.color = 'yellow'
+            bdComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
@@ -1647,7 +1647,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             bdComp.textContent = 'Good';
-            bdComp.style.color = 'yellow'
+            bdComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
@@ -1658,7 +1658,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             bdComp.textContent = 'Good';
-            bdComp.style.color = 'yellow'
+            bdComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 || ptBDNum.textContent === '11/2' ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
@@ -1669,7 +1669,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#05D087'
         } else if (plnum === 7 || ptBDNum.textContent === '11/2' ) {
             bdComp.textContent = 'Good';
-            bdComp.style.color = 'yellow'
+            bdComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
@@ -1680,7 +1680,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
             bdComp.textContent = 'Good';
-            bdComp.style.color = 'yellow'
+            bdComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
@@ -1691,7 +1691,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 8  || ptBDNum.textContent === '11/2' ) {
             bdComp.textContent = 'Good';
-            bdComp.style.color = 'yellow'
+            bdComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
@@ -1702,7 +1702,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
             bdComp.textContent = 'Good';
-            bdComp.style.color = 'yellow'
+            bdComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 6 ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
@@ -1713,7 +1713,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#05D087'
         } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptBDNum.textContent === '11/2') {
             bdComp.textContent = 'Good';
-            bdComp.style.color = 'yellow'
+            bdComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
@@ -1724,7 +1724,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
             bdComp.textContent = 'Good';
-            bdComp.style.color = 'yellow'
+            bdComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
@@ -1735,7 +1735,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#05D087'
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
             bdComp.textContent = 'Good';
-            bdComp.style.color = 'yellow'
+            bdComp.style.color = '#F8DE22'
         } else if (plnum === 3 ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
@@ -1752,7 +1752,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#05D087'
         } else if (plnum === 2 || plnum === 6 ) {
             expComp.textContent = 'Good';
-            expComp.style.color = 'yellow'
+            expComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
@@ -1763,7 +1763,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             expComp.textContent = 'Good';
-            expComp.style.color = 'yellow'
+            expComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
@@ -1774,7 +1774,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             expComp.textContent = 'Good';
-            expComp.style.color = 'yellow'
+            expComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 || ptEPNum.textContent === '11/2') {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
@@ -1785,7 +1785,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#05D087'
         } else if (plnum === 7 || ptEPNum.textContent === '11/2') {
             expComp.textContent = 'Good';
-            expComp.style.color = 'yellow'
+            expComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
@@ -1796,7 +1796,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
             expComp.textContent = 'Good';
-            expComp.style.color = 'yellow'
+            expComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
@@ -1807,7 +1807,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 8 || ptEPNum.textContent === '11/2' ) {
             expComp.textContent = 'Good';
-            expComp.style.color = 'yellow'
+            expComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
@@ -1818,7 +1818,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
             expComp.textContent = 'Good';
-            expComp.style.color = 'yellow'
+            expComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 6 ) {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
@@ -1829,7 +1829,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#05D087'
         } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptEPNum.textContent === '11/2') {
             expComp.textContent = 'Good';
-            expComp.style.color = 'yellow'
+            expComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
@@ -1840,7 +1840,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
             expComp.textContent = 'Good';
-            expComp.style.color = 'yellow'
+            expComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
@@ -1851,7 +1851,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#05D087'
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
             expComp.textContent = 'Good';
-            expComp.style.color = 'yellow'
+            expComp.style.color = '#F8DE22'
         } else if (plnum === 3 ) {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
@@ -1868,7 +1868,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#05D087'
         } else if (plnum === 2 || plnum === 6 ) {
             hdComp.textContent = 'Good';
-            hdComp.style.color = 'yellow'
+            hdComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
@@ -1879,7 +1879,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             hdComp.textContent = 'Good';
-            hdComp.style.color = 'yellow'
+            hdComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
@@ -1890,7 +1890,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             hdComp.textContent = 'Good';
-            hdComp.style.color = 'yellow'
+            hdComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 || ptHDNum.textContent === '11/2' ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
@@ -1901,7 +1901,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#05D087'
         } else if (plnum === 7 || ptHDNum.textContent === '11/2') {
             hdComp.textContent = 'Good';
-            hdComp.style.color = 'yellow'
+            hdComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
@@ -1912,7 +1912,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
             hdComp.textContent = 'Good';
-            hdComp.style.color = 'yellow'
+            hdComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
@@ -1923,7 +1923,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 8 || ptHDNum.textContent === '11/2' ) {
             hdComp.textContent = 'Good';
-            hdComp.style.color = 'yellow'
+            hdComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
@@ -1934,7 +1934,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
             hdComp.textContent = 'Good';
-            hdComp.style.color = 'yellow'
+            hdComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 6 ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
@@ -1945,7 +1945,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#05D087'
         } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptHDNum.textContent === '11/2') {
             hdComp.textContent = 'Good';
-            hdComp.style.color = 'yellow'
+            hdComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
@@ -1956,7 +1956,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
             hdComp.textContent = 'Good';
-            hdComp.style.color = 'yellow'
+            hdComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
@@ -1967,7 +1967,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#05D087'
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
             hdComp.textContent = 'Good';
-            hdComp.style.color = 'yellow'
+            hdComp.style.color = '#F8DE22'
         } else if (plnum === 3 ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
@@ -1984,7 +1984,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#05D087'
         } else if (plnum === 2 || plnum === 6 ) {
             pComp.textContent = 'Good';
-            pComp.style.color = 'yellow'
+            pComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
@@ -1995,7 +1995,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             pComp.textContent = 'Good';
-            pComp.style.color = 'yellow'
+            pComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
@@ -2006,7 +2006,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             pComp.textContent = 'Good';
-            pComp.style.color = 'yellow'
+            pComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 || ptPNum.textContent === '11/2') {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
@@ -2017,7 +2017,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#05D087'
         } else if (plnum === 7 || ptPNum.textContent === '11/2' ) {
             pComp.textContent = 'Good';
-            pComp.style.color = 'yellow'
+            pComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
@@ -2028,7 +2028,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
             pComp.textContent = 'Good';
-            pComp.style.color = 'yellow'
+            pComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
@@ -2039,7 +2039,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 8  || ptPNum.textContent === '11/2') {
             pComp.textContent = 'Good';
-            pComp.style.color = 'yellow'
+            pComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
@@ -2050,7 +2050,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
             pComp.textContent = 'Good';
-            pComp.style.color = 'yellow'
+            pComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 6 ) {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
@@ -2061,7 +2061,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#05D087'
         } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptPNum.textContent === '11/2') {
             pComp.textContent = 'Good';
-            pComp.style.color = 'yellow'
+            pComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
@@ -2072,7 +2072,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
             pComp.textContent = 'Good';
-            pComp.style.color = 'yellow'
+            pComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
@@ -2083,7 +2083,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#05D087'
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
             pComp.textContent = 'Good';
-            pComp.style.color = 'yellow'
+            pComp.style.color = '#F8DE22'
         } else if (plnum === 3 ) {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
@@ -2100,7 +2100,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             mComp.style.color = '#05D087'
         } else if (plnum === 2 || plnum === 6 ) {
             mComp.textContent = 'Good';
-            mComp.style.color = 'yellow'
+            mComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
             mComp.textContent = 'Challenge';
             mComp.style.color = '#F27121'
@@ -2111,7 +2111,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             mComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             mComp.textContent = 'Good';
-            mComp.style.color = 'yellow'
+            mComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             mComp.textContent = 'Challenge';
             mComp.style.color = '#F27121'
@@ -2122,7 +2122,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             mComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             mComp.textContent = 'Good';
-            mComp.style.color = 'yellow'
+            mComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 || ptMNum.textContent === '11/2') {
             mComp.textContent = 'Challenge';
             mComp.style.color = '#F27121'
@@ -2133,7 +2133,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             mComp.style.color = '#05D087'
         } else if (plnum === 7 || ptMNum.textContent === '11/2') {
             mComp.textContent = 'Good';
-            mComp.style.color = 'yellow'
+            mComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
             mComp.textContent = 'Challenge';
             mComp.style.color = '#F27121'
@@ -2144,7 +2144,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             mComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
             mComp.textContent = 'Good';
-            mComp.style.color = 'yellow'
+            mComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 6 ) {
             mComp.textContent = 'Challenge';
             mComp.style.color = '#F27121'
@@ -2155,7 +2155,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             mComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 8 || ptMNum.textContent === '11/2' ) {
             mComp.textContent = 'Good';
-            mComp.style.color = 'yellow'
+            mComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
             mComp.textContent = 'Challenge';
             mComp.style.color = '#F27121'
@@ -2166,7 +2166,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             mComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
             mComp.textContent = 'Good';
-            mComp.style.color = 'yellow'
+            mComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 6 ) {
             mComp.textContent = 'Challenge';
             mComp.style.color = '#F27121'
@@ -2177,7 +2177,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             mComp.style.color = '#05D087'
         } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptMNum.textContent === '11/2') {
             mComp.textContent = 'Good';
-            mComp.style.color = 'yellow'
+            mComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
             mComp.textContent = 'Challenge';
             mComp.style.color = '#F27121'
@@ -2188,7 +2188,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             mComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
             mComp.textContent = 'Good';
-            mComp.style.color = 'yellow'
+            mComp.style.color = '#F8DE22'
         } else if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             mComp.textContent = 'Challenge';
             mComp.style.color = '#F27121'
@@ -2199,7 +2199,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             mComp.style.color = '#05D087'
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
             mComp.textContent = 'Good';
-            mComp.style.color = 'yellow'
+            mComp.style.color = '#F8DE22'
         } else if (plnum === 3 ) {
             mComp.textContent = 'Challenge';
             mComp.style.color = '#F27121'
