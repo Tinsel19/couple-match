@@ -4,15 +4,6 @@
     margin: 0px;
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: whitesmoke;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding: 2rem;
-    font-family: 'Roboto', sans-serif;
-}
 
 .head {
     border-radius: 10px;
@@ -23,6 +14,7 @@ body {
     background-image: linear-gradient(80deg, #98EECC, #D0F5BE, white);
     color: #45FFCA;
     text-shadow: 3px 3px 3px rgb(43, 38, 38);
+    margin-bottom: 40px;
 }
 
 h1 {
@@ -40,8 +32,11 @@ section {
 
 .main-body {
     background-color: whitesmoke;
-    margin-top: 50px;
     border-radius: 10px;
+    padding-top: 3rem;
+    /* padding-bottom: 3rem; */
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .flex {
@@ -205,12 +200,9 @@ select {
     }
 
     .main-body {
-        padding: 0px;
-    }
-
-    body {
         padding: 1rem;
     }
+
 }
 
 @media (max-width: 479px) {
@@ -236,12 +228,9 @@ select {
     }
 
     .main-body {
-        padding: 0px;
-    }
-
-    body {
         padding: .7rem;
     }
+
 }
 
 
