@@ -157,7 +157,11 @@ select {
 }
 
 
-
+#percent {
+    background-color: white;
+    padding: 4px;
+    border-radius: 10px;
+}
 
 
 .btn {
