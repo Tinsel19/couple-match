@@ -1595,7 +1595,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 8 || ptLPNum.textContent === '11/2') {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6 || plnum === 8) {
+        } else if (plnum === 5 || plnum === 6 || plnum === 7) {
             lpComp.textContent = 'Good';
             lpComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -1711,7 +1711,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             bdComp.textContent = 'Perfect';
             bdComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptBDNum.textContent === '11/2') {
+        } else if (plnum === 5 || plnum === 6 || plnum === 7 || ptBDNum.textContent === '11/2') {
             bdComp.textContent = 'Good';
             bdComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -1827,7 +1827,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             expComp.textContent = 'Perfect';
             expComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptEPNum.textContent === '11/2') {
+        } else if (plnum === 5 || plnum === 6 || plnum === 7 || ptEPNum.textContent === '11/2') {
             expComp.textContent = 'Good';
             expComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -2059,7 +2059,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             pComp.textContent = 'Perfect';
             pComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptPNum.textContent === '11/2') {
+        } else if (plnum === 5 || plnum === 6 || plnum === 7 || ptPNum.textContent === '11/2') {
             pComp.textContent = 'Good';
             pComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -2175,7 +2175,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             mComp.textContent = 'Perfect';
             mComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6 || plnum === 8 || ptMNum.textContent === '11/2') {
+        } else if (plnum === 5 || plnum === 6 || plnum === 7 || ptMNum.textContent === '11/2') {
             mComp.textContent = 'Good';
             mComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
