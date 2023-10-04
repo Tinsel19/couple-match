@@ -34,7 +34,6 @@ section {
     background-color: #ffc439;
     border-radius: 10px;
     padding-top: 3rem;
-    /* padding-bottom: 3rem; */
     padding: 2rem;
     font-family: 'Roboto', sans-serif;
 }
@@ -97,6 +96,8 @@ section {
     gap: 10px;
     box-shadow: 3px 3px 3px grey;
     margin-bottom: 20px;
+    background-color: white;
+    padding: 5px;
 }
 
 
@@ -164,13 +165,14 @@ select {
 }
 
 .btn button {
-    background-color: #ffc439;
+    background-image: linear-gradient(80deg, #98EECC, #D0F5BE, white);
     color: white;
     border-radius: 10px;
     border: 1px solid transparent;
     padding:1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    text-shadow: 2px 2px 2px grey;
 }
 
 .btn button:hover {
