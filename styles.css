@@ -54,6 +54,7 @@ section {
     text-underline-offset: 0.5rem;
     font-weight: bold;
     border-bottom: 1px solid whitesmoke;
+    display: block;
 
 }
 
@@ -231,6 +232,13 @@ select {
         padding: .7rem;
     }
 
+}
+
+@media (max-width: 363px) {
+    .flex p {
+        font-size: .6rem;
+        padding: .5rem;
+    }
 }
 
 
