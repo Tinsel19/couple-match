@@ -1,35 +1,35 @@
 
 
-var yfName = document.getElementById('yfName');
-var yMonth = document.getElementById('yMonth');
-var yDay = document.getElementById('yDay');
-var yYear = document.getElementById('yYear');
+var fyfName = document.getElementById('fyfName');
+var cyMonth = document.getElementById('cyMonth');
+var cyDay = document.getElementById('cyDay');
+var cfyYear = document.getElementById('cfyYear');
 
-var pfName = document.getElementById('pfName');
-var pMonth = document.getElementById('pMonth');
-var pDay = document.getElementById('pDay');
-var pYear = document.getElementById('pYear');
+var fpfName = document.getElementById('fpfName');
+var cpMonth = document.getElementById('cpMonth');
+var cpDay = document.getElementById('cpDay');
+var cfpYear = document.getElementById('cfpYear');
 
-var ytName = document.getElementById('ytName');
-var ptName = document.getElementById('ptName');
+var cytName = document.getElementById('cytName');
+var cptName = document.getElementById('cptName');
 
-var ytLPNum = document.getElementById('ytLPNum');
-var ptLPNum = document.getElementById('ptLPNum');
+var cytLPNum = document.getElementById('cytLPNum');
+var cptLPNum = document.getElementById('cptLPNum');
 
-var ytBDNum = document.getElementById('ytBDNum');
-var ptBDNum = document.getElementById('ptBDNum');
+var cytBDNum = document.getElementById('cytBDNum');
+var cptBDNum = document.getElementById('cptBDNum');
 
-var ytEPNum = document.getElementById('ytEPNum');
-var ptEPNum = document.getElementById('ptEPNum');
+var cytEPNum = document.getElementById('cytEPNum');
+var cptEPNum = document.getElementById('cptEPNum');
 
-var ytHDNum = document.getElementById('ytHDNum');
-var ptHDNum = document.getElementById('ptHDNum');
+var cytHDNum = document.getElementById('cytHDNum');
+var cptHDNum = document.getElementById('cptHDNum');
 
-var ytPNum = document.getElementById('ytPNum');
-var ptPNum = document.getElementById('ptPNum');
+var cytPNum = document.getElementById('cytPNum');
+var cptPNum = document.getElementById('cptPNum');
 
-var ytMNum = document.getElementById('ytMNum');
-var ptMNum = document.getElementById('ptMNum');
+var ytMNum = document.getElementById('cytMNum');
+var ptMNum = document.getElementById('cptMNum');
 
 var lpComp = document.getElementById('lpComp');
 var bdComp = document.getElementById('bdComp');
@@ -38,25 +38,25 @@ var hdComp = document.getElementById('hdComp');
 var pComp = document.getElementById('pComp');
 var mComp = document.getElementById('mComp');
 
-var percent = document.getElementById('percent');
+var cpercent = document.getElementById('cpercent');
 
 
-document.getElementById('match').addEventListener('click', ()=> {
+document.getElementById('matchCoup').addEventListener('click', ()=> {
 
-    if (yfName.value === '' || yYear.value === '' || pfName.value === '' || pYear.value === '') {
-        document.getElementById('hide').style.display = 'none';
+    if (fyfName.value === '' || cfyYear.value === '' || fpfName.value === '' || cfpYear.value === '') {
+        document.getElementById('hider').style.display = 'none';
         document.getElementById('show').style.display = 'none';
     } else {
-        document.getElementById('hide').style.display = 'block';
+        document.getElementById('hider').style.display = 'block';
         document.getElementById('show').style.display = 'block';
     }
     
 
     // Y date of birth 
-    var yourMonth = Number(yMonth.value);
+    var yourMonth = Number(cyMonth.value);
     var yourMonthHold = yourMonth;
-    var yourDayHold = yDay.value;
-    var yourYearHold = yYear.value;
+    var yourDayHold = cyDay.value;
+    var yourYearHold = cfyYear.value;
     switch (yourMonth) {
         case 1:
             yourMonth = 'January'
@@ -111,11 +111,11 @@ document.getElementById('match').addEventListener('click', ()=> {
     };
 
 
-    ytName.innerHTML = yfName.value + '<br>'+ yourMonth + '-' + yourDayHold + '-' + yourYearHold;
+    cytName.innerHTML = fyfName.value + '<br>'+ yourMonth + '-' + yourDayHold + '-' + yourYearHold;
 
-    var dayString = String(yDay.value);
-    var monthString = String(yMonth.value);
-    var yearString = String(yYear.value);
+    var dayString = String(cyDay.value);
+    var monthString = String(cyMonth.value);
+    var yearString = String(cfyYear.value);
 
 
     var daySplit = dayString.split('');
@@ -200,21 +200,21 @@ document.getElementById('match').addEventListener('click', ()=> {
     var lsum = sum;
     var lpHold, edHold, suHold, pnHold, nSum, dbTotalSum;
     if (sum < 10) {
-        ytLPNum.innerHTML = '<b>' +sum+ '</b>';
+        cytLPNum.innerHTML = '<b>' +sum+ '</b>';
     } else if (sum === 10) {
-        ytLPNum.innerHTML = '<b> 1 </b>'
+        cytLPNum.innerHTML = '<b> 1 </b>'
     }
     while (sum > 10) {
         if (sum === 11) {
-            ytLPNum.innerHTML = '11/2';
+            cytLPNum.innerHTML = '11/2';
             sum = 2;
             break
         } else if(sum === 22) {
-            ytLPNum.innerHTML = '4';
+            cytLPNum.innerHTML = '4';
             sum = 4;
             break;
         } else if (sum === 33) {
-            ytLPNum.innerHTML = '6';
+            cytLPNum.innerHTML = '6';
             sum = 6;
             break;
         } else {
@@ -224,11 +224,11 @@ document.getElementById('match').addEventListener('click', ()=> {
             sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
             lpHold = sum;
             if (Number(numberString) === 19){
-                ytLPNum.innerHTML =  '1';
+                cytLPNum.innerHTML =  '1';
             } else if (sum === 10) {
-                ytLPNum.innerHTML = '1';
+                cytLPNum.innerHTML = '1';
             } else {
-                ytLPNum.innerHTML = sum ;
+                cytLPNum.innerHTML = sum ;
             }
         }
     };
@@ -280,29 +280,29 @@ document.getElementById('match').addEventListener('click', ()=> {
     sumDayArray = Number(sumDayArray);
     console.log(sumDayArray)
     if (sumDayArray === 1) {
-        ytBDNum.innerHTML = '<b>1</b>';
+        cytBDNum.innerHTML = '<b>1</b>';
     } else if (sumDayArray === 2) {
-        ytBDNum.innerHTML = '<b>2</b>';
+        cytBDNum.innerHTML = '<b>2</b>';
     } else if (sumDayArray === 3) {
-        ytBDNum.innerHTML = '<b>3</b>';
+        cytBDNum.innerHTML = '<b>3</b>';
     } else if (sumDayArray === 4) {
-        ytBDNum.innerHTML = '<b>4</b>';
+        cytBDNum.innerHTML = '<b>4</b>';
     } else if (sumDayArray === 5) {
-        ytBDNum.innerHTML = '<b>5</b>';
+        cytBDNum.innerHTML = '<b>5</b>';
     } else if (sumDayArray === 6) {
-        ytBDNum.innerHTML = '<b>6</b>';
+        cytBDNum.innerHTML = '<b>6</b>';
     } else if (sumDayArray === 7) {
-        ytBDNum.innerHTML = '<b>7</b>';
+        cytBDNum.innerHTML = '<b>7</b>';
     } else if (sumDayArray === 8) {
-        ytBDNum.innerHTML = '<b>8</b>';
+        cytBDNum.innerHTML = '<b>8</b>';
     } else if (sumDayArray === 9) {
-        ytBDNum.innerHTML = '<b>9</b>';
+        cytBDNum.innerHTML = '<b>9</b>';
     } else if (xSum === '11/2')  {
-        ytBDNum.innerHTML =  '<b>11/2</b>';
+        cytBDNum.innerHTML =  '<b>11/2</b>';
     } 
 
     // expression / destiny number 
-    var ednfName = yfName.value.split(' ');
+    var ednfName = fyfName.value.split(' ');
     var count = 0;
     var countList = [];
     var countHold = 0;
@@ -415,33 +415,33 @@ document.getElementById('match').addEventListener('click', ()=> {
         }
     }
     if (dbTotalSum === 10) {
-        ytEPNum.innerHTML = '<b>1</b>' ;
+        cytEPNum.innerHTML = '<b>1</b>' ;
     } else if (dbTotalSum === '11/2') {
-        ytEPNum.innerHTML = '<b>11/2</b>';
+        cytEPNum.innerHTML = '<b>11/2</b>';
     } else if (dbTotalSum === 28) {
-        ytEPNum.innerHTML = '<b>1</b>';
+        cytEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 37) {
-        ytEPNum.innerHTML = '<b>1</b>';
+        cytEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 46) {
-        ytEPNum.innerHTML = '<b>1</b>';
+        cytEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 55) {
-        ytEPNum.innerHTML = '<b>1</b>';
+        cytEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 64) {
-        ytEPNum.innerHTML = '<b>1</b>';
+        cytEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 73) {
-        ytEPNum.innerHTML = '<b>1</b>';
+        cytEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 82) {
-        ytEPNum.innerHTML = '<b>1</b>';
+        cytEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 91) {
-        ytEPNum.innerHTML = '<b>1</b>';
+        cytEPNum.innerHTML = '<b>1</b>';
     }
     else {
-        ytEPNum.innerHTML = '<b>' + nSum + '</b>';
+        cytEPNum.innerHTML = '<b>' + nSum + '</b>';
     };
 
 
     // Your Soul Urge / Heart Desire Number 
-    var suhdfName = yfName.value.split(' ');
+    var suhdfName = fyfName.value.split(' ');
     count = 0;
     countList = [];
     suhdfName = Array.from(suhdfName);
@@ -491,23 +491,23 @@ document.getElementById('match').addEventListener('click', ()=> {
     if (countHold < 10) {
         dbTotalSum = countHold;
         nSum = countHold;
-        ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+        cytHDNum.innerHTML = '<b>' + nSum + '</b>';
     } else if (countHold === 10) {
         dbTotalSum = 10;
         nSum = 1;
-        ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+        cytHDNum.innerHTML = '<b>' + nSum + '</b>';
     } else if (countHold === 11) {
         dbTotalSum = 11;
         nSum = 2
-        ytHDNum.innerHTML = '<b>11/2</b>';
+        cytHDNum.innerHTML = '<b>11/2</b>';
     } else if (countHold === 22) {
         dbTotalSum = 22;
         nSum = 4
-        ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+        cytHDNum.innerHTML = '<b>' + nSum + '</b>';
     } else if (countHold === 33) {
         dbTotalSum = 33;
         nSum = 6;
-        ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+        cytHDNum.innerHTML = '<b>' + nSum + '</b>';
     } else if (countHold > 10) {
         dbTotalSum = countHold;
         dbSplit = String(countHold).split('');
@@ -515,60 +515,60 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (nSum < 10) {
             dbTotalSum;
             nSum;
-            ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+            cytHDNum.innerHTML = '<b>' + nSum + '</b>';
         } else if (nSum === 10) {
             dbTotalSum = 10;
             nSum = 1;
-            ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+            cytHDNum.innerHTML = '<b>' + nSum + '</b>';
         } else if (nSum === 11) {
             dbTotalSum = 11;
             nSum = 2;
-            ytHDNum.innerHTML = '<b>11/2</b>';
+            cytHDNum.innerHTML = '<b>11/2</b>';
         } else if (nSum === 22) {
             dbTotalSum = 22;
             nSum = 4;
-            ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+            cytHDNum.innerHTML = '<b>' + nSum + '</b>';
         } else if (nSum === 33) {
             dbTotalSum = 33;
             nSum = 6;
-            ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+            cytHDNum.innerHTML = '<b>' + nSum + '</b>';
         } else if (nSum > 10) {
             dbTotalSum = nSum;
             dbSplit = String(dbTotalSum).split('');
             nSum = eval(dbSplit.join('+'));
-            ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+            cytHDNum.innerHTML = '<b>' + nSum + '</b>';
 
             if (nSum < 10) {
                 dbTotalSum;
                 nSum;
-                ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+                cytHDNum.innerHTML = '<b>' + nSum + '</b>';
             } else if (nSum === 10) {
                 dbTotalSum = 10;
                 nSum = 1;
-                ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+                cytHDNum.innerHTML = '<b>' + nSum + '</b>';
             } else if (nSum === 11) {
                 dbTotalSum = 11;
                 nSum = 2;
-                ytHDNum.innerHTML = '<b>11/2</b>';
+                cytHDNum.innerHTML = '<b>11/2</b>';
             } else if (nSum === 22) {
                 dbTotalSum = 22;
                 nSum = 4;
-                ytHDNum.innerHTML = '<b>' + nSum + '</b>';
+                cytHDNum.innerHTML = '<b>' + nSum + '</b>';
             } else if (nSum === 33) {
                 dbTotalSum = 33;
                 nSum = 6;
-                ytHDNum.innerHTML = '<b>' + nSum + ' </b>';
+                cytHDNum.innerHTML = '<b>' + nSum + ' </b>';
             } else if (nSum > 10) {
                 dbTotalSum = nSum;
                 dbSplit = String(dbTotalSum).split('');
                 nSum = eval(dbSplit.join('+'));
-                ytHDNum.innerHTML = '<b>' + nSum + ' </b>';
+                cytHDNum.innerHTML = '<b>' + nSum + ' </b>';
             }
         }
     };
 
     // Your personality number 
-    pnfName = yfName.value.split(' ');
+    pnfName = fyfName.value.split(' ');
     count = 0;
     countList = [], countHold = 0;
     pnfName = Array.from(pnfName);
@@ -637,87 +637,87 @@ document.getElementById('match').addEventListener('click', ()=> {
     count = countHold;
     if (count < 10) {
         count;
-        ytPNum.innerHTML = '<b>' + count + '</b>' ;
+        cytPNum.innerHTML = '<b>' + count + '</b>' ;
     } else if (count == 10) {
         count = 1;
-        ytPNum.innerHTML = '<b>1</b>' ;
+        cytPNum.innerHTML = '<b>1</b>' ;
     } else if ( count === 11) {
         count = 13;
         sum = 4;
-        ytPNum.innerHTML = '<b>11/2</b>' ;
+        cytPNum.innerHTML = '<b>11/2</b>' ;
     } else if ( count === 22 || count === 33) {
         count;
         pnSplit = String(count).split('');
         sum = eval(pnSplit.join('+'));
-        ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
     } else if ( count === 13) {
         count = 13;
         sum = 4;
-        ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
     } else if ( count === 14) {
         count = 14;
         sum = 5;
-        ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
     } else if ( count === 16) {
         count = 16;
         sum = 7;
-        ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
     } else if ( count === 19) {
         count = 19;
         sum = 1;
-        ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
     } else if (count > 10) {
         pnSplit = String(count).split('');
         sum = eval(pnSplit.join('+'));
-        ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
         count = sum
 
         if (count < 10) {
             count;
-            ytPNum.innerHTML = '<b>' + count + '</b>' ;
+            cytPNum.innerHTML = '<b>' + count + '</b>' ;
         } else if (count == 10) {
             count = 1;
-            ytPNum.innerHTML = '<b>1</b>' ;
+            cytPNum.innerHTML = '<b>1</b>' ;
         } else if ( count === 11) {
             count = 13;
             sum = 4;
-            ytPNum.innerHTML = '<b>11/2</b>' ;
+            cytPNum.innerHTML = '<b>11/2</b>' ;
         } else if (count === 22 || count === 33) {
             count;
             pnSplit = String(count).split('');
             sum = eval(pnSplit.join('+'));
-            ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
         } else if ( count === 13) {
             count = 13;
             sum = 4;
-            ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
         } else if ( count === 14) {
             count = 14;
             sum = 5;
-            ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
         } else if ( count === 16) {
             count = 16;
             sum = 7;
-            ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
         } else if ( count === 19) {
             count = 19;
             sum = 1;
-            ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
         } else if (count > 10) {
             pnSplit = String(count).split('');
             sum = eval(pnSplit.join('+'));
-            ytPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cytPNum.innerHTML = '<b>' +sum+ '</b>' ;
             count = sum
         }
     };
 
     // Your Maturity Number 
-    var lifePath = ((ytLPNum.textContent).trim()).split('/');
+    var lifePath = ((cytLPNum.textContent).trim()).split('/');
     lpHold = Number(lifePath[lifePath.length - 1]);
     mSplit = String(lpHold).split('');
     lpHold = eval(mSplit.join('+'));
     
-    var expPath = ((ytEPNum.textContent).trim()).split('/');
+    var expPath = ((cytEPNum.textContent).trim()).split('/');
     edHold = Number(expPath[expPath.length - 1])
     mSplit = String(edHold).split('');
     edHold = eval(mSplit.join('+'));
@@ -788,10 +788,10 @@ document.getElementById('match').addEventListener('click', ()=> {
     
 
     // Partner date of birth 
-    var partnerMonth = Number(pMonth.value);
+    var partnerMonth = Number(cpMonth.value);
     var partnerMonthHold = partnerMonth;
-    var partnerDayHold = pDay.value;
-    var partnerYearHold = pYear.value;
+    var partnerDayHold = cpDay.value;
+    var partnerYearHold = cfpYear.value;
     switch (partnerMonth) {
         case 1:
             partnerMonth = 'January'
@@ -846,11 +846,11 @@ document.getElementById('match').addEventListener('click', ()=> {
     };
 
 
-    ptName.innerHTML = pfName.value + '<br>'+ partnerMonth + '-' + partnerDayHold + '-' + partnerYearHold;
+    cptName.innerHTML = fpfName.value + '<br>'+ partnerMonth + '-' + partnerDayHold + '-' + partnerYearHold;
     
-    var dayString = String(pDay.value);
-    var monthString = String(pMonth.value);
-    var yearString = String(pYear.value);
+    var dayString = String(cpDay.value);
+    var monthString = String(cpMonth.value);
+    var yearString = String(cfpYear.value);
 
 
     var daySplit = dayString.split('');
@@ -935,21 +935,21 @@ document.getElementById('match').addEventListener('click', ()=> {
     var lsum = sum;
     var lpHold, edHold, suHold, pnHold, nSum, dbTotalSum;
     if (sum < 10) {
-        ptLPNum.innerHTML = '<b>' +sum+ '</b>';
+        cptLPNum.innerHTML = '<b>' +sum+ '</b>';
     } else if (sum === 10) {
-     ptLPNum.innerHTML = '<b> 1 </b>'
+     cptLPNum.innerHTML = '<b> 1 </b>'
     }
     while (sum > 10) {
         if (sum === 11) {
-         ptLPNum.innerHTML = '11/2';
+         cptLPNum.innerHTML = '11/2';
             sum = 2;
             break
         } else if(sum === 22) {
-         ptLPNum.innerHTML = '4';
+         cptLPNum.innerHTML = '4';
             sum = 4;
             break;
         } else if (sum === 33) {
-         ptLPNum.innerHTML = '6';
+         cptLPNum.innerHTML = '6';
             sum = 6;
             break;
         } else {
@@ -959,11 +959,11 @@ document.getElementById('match').addEventListener('click', ()=> {
             sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
             lpHold = sum;
             if (Number(numberString) === 19){
-             ptLPNum.innerHTML =  '1';
+             cptLPNum.innerHTML =  '1';
             } else if (sum === 10) {
-             ptLPNum.innerHTML = '1';
+             cptLPNum.innerHTML = '1';
             } else {
-             ptLPNum.innerHTML = sum ;
+             cptLPNum.innerHTML = sum ;
             }
         }
     };
@@ -1014,36 +1014,36 @@ document.getElementById('match').addEventListener('click', ()=> {
 
     // console.log(sumDayArray)
     if (sumDayArray === 1) {
-        ptBDNum.innerHTML = '<b>1</b>';
+        cptBDNum.innerHTML = '<b>1</b>';
     } else if (sumDayArray === 2) {
-        ptBDNum.innerHTML = '<b>2</b>';
+        cptBDNum.innerHTML = '<b>2</b>';
     } else if (sumDayArray === 3) {
-        ptBDNum.innerHTML = '<b>3</b>';
+        cptBDNum.innerHTML = '<b>3</b>';
     } else if (sumDayArray === 4) {
-        ptBDNum.innerHTML = '<b>4</b>';
+        cptBDNum.innerHTML = '<b>4</b>';
     } else if (sumDayArray === 5) {
-        ptBDNum.innerHTML = '<b>5</b>';
+        cptBDNum.innerHTML = '<b>5</b>';
     } else if (sumDayArray === 6) {
-        ptBDNum.innerHTML = '<b>6</b>';
+        cptBDNum.innerHTML = '<b>6</b>';
     } else if (sumDayArray === 7) {
-        ptBDNum.innerHTML = '<b>7</b>';
+        cptBDNum.innerHTML = '<b>7</b>';
     } else if (sumDayArray === 8) {
-        ptBDNum.innerHTML = '<b>8</b>';
+        cptBDNum.innerHTML = '<b>8</b>';
     } else if (sumDayArray === 9) {
-        ptBDNum.innerHTML = '<b>9</b>';
+        cptBDNum.innerHTML = '<b>9</b>';
     } else if (sumDayArray === '11/2') {
-        ptBDNum.innerHTML =  '<b>11/2</b>';
+        cptBDNum.innerHTML =  '<b>11/2</b>';
     } else if (sumDayArray === '14/5') {
-        ptBDNum.innerHTML = '<b>5</b>';
+        cptBDNum.innerHTML = '<b>5</b>';
     } else if (sumDayArray === '16/7') {
-        ptBDNum.innerHTML = '<b>7</b>';
+        cptBDNum.innerHTML = '<b>7</b>';
     } else if (sumDayArray === '19/1') {
-        ptBDNum.innerHTML = '<b>1</b>';
+        cptBDNum.innerHTML = '<b>1</b>';
     };
 
 
     // Partner expression / destiny number 
-    var ednfName = pfName.value.split(' ');
+    var ednfName = fpfName.value.split(' ');
     var count = 0;
     var countList = [];
     var countHold = 0;
@@ -1156,33 +1156,33 @@ document.getElementById('match').addEventListener('click', ()=> {
         }
     }
     if (dbTotalSum === 10) {
-        ptEPNum.innerHTML = '<b>1</b>' ;
+        cptEPNum.innerHTML = '<b>1</b>' ;
     } else if (dbTotalSum === 19) {
-        ptEPNum.innerHTML = '<b>1</b>';
+        cptEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 28) {
-        ptEPNum.innerHTML = '<b>1</b>';
+        cptEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 37) {
-        ptEPNum.innerHTML = '<b>1</b>';
+        cptEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 46) {
-        ptEPNum.innerHTML = '<b>1</b>';
+        cptEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 55) {
-        ptEPNum.innerHTML = '<b>1</b>';
+        cptEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 64) {
-        ptEPNum.innerHTML = '<b>1</b>';
+        cptEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 73) {
-        ptEPNum.innerHTML = '<b>1</b>';
+        cptEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === 82) {
-        ptEPNum.innerHTML = '<b>1</b>';
+        cptEPNum.innerHTML = '<b>1</b>';
     } else if (dbTotalSum === '11/2') {
-        ptEPNum.innerHTML = '<b>11/2</b>';
+        cptEPNum.innerHTML = '<b>11/2</b>';
     }
     else {
-        ptEPNum.innerHTML = '<b>' + nSum + '</b>';
+        cptEPNum.innerHTML = '<b>' + nSum + '</b>';
     };
 
 
     // Partner Soul Urge / Heart Desire Number 
-    var suhdfName = pfName.value.split(' ');
+    var suhdfName = fpfName.value.split(' ');
     count = 0;
     countList = [];
     suhdfName = Array.from(suhdfName);
@@ -1232,23 +1232,23 @@ document.getElementById('match').addEventListener('click', ()=> {
     if (countHold < 10) {
         dbTotalSum = countHold;
         nSum = countHold;
-        ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+        cptHDNum.innerHTML = '<b>' + nSum + '</b>';
     } else if (countHold === 10) {
         dbTotalSum = 10;
         nSum = 1;
-        ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+        cptHDNum.innerHTML = '<b>' + nSum + '</b>';
     } else if (countHold === 11) {
         dbTotalSum = '11/2';
         nSum = 2
-        ptHDNum.innerHTML = '<b>11/2</b>';
+        cptHDNum.innerHTML = '<b>11/2</b>';
     } else if (countHold === 22) {
         dbTotalSum = 22;
         nSum = 4
-        ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+        cptHDNum.innerHTML = '<b>' + nSum + '</b>';
     } else if (countHold === 33) {
         dbTotalSum = 33;
         nSum = 6;
-        ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+        cptHDNum.innerHTML = '<b>' + nSum + '</b>';
     } else if (countHold > 10) {
         dbTotalSum = countHold;
         dbSplit = String(countHold).split('');
@@ -1256,60 +1256,60 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (nSum < 10) {
             dbTotalSum;
             nSum;
-            ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+            cptHDNum.innerHTML = '<b>' + nSum + '</b>';
         } else if (nSum === 10) {
             dbTotalSum = 10;
             nSum = 1;
-            ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+            cptHDNum.innerHTML = '<b>' + nSum + '</b>';
         } else if (nSum === 11) {
             dbTotalSum = '11/2';
             nSum = 2;
-            ptHDNum.innerHTML = '<b>11/2</b>';
+            cptHDNum.innerHTML = '<b>11/2</b>';
         } else if (nSum === 22) {
             dbTotalSum = 22;
             nSum = 4;
-            ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+            cptHDNum.innerHTML = '<b>' + nSum + '</b>';
         } else if (nSum === 33) {
             dbTotalSum = 33;
             nSum = 6;
-            ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+            cptHDNum.innerHTML = '<b>' + nSum + '</b>';
         } else if (nSum > 10) {
             dbTotalSum = nSum;
             dbSplit = String(dbTotalSum).split('');
             nSum = eval(dbSplit.join('+'));
-            ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+            cptHDNum.innerHTML = '<b>' + nSum + '</b>';
 
             if (nSum < 10) {
                 dbTotalSum;
                 nSum;
-                ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+                cptHDNum.innerHTML = '<b>' + nSum + '</b>';
             } else if (nSum === 10) {
                 dbTotalSum = 10;
                 nSum = 1;
-                ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+                cptHDNum.innerHTML = '<b>' + nSum + '</b>';
             } else if (nSum === 11) {
                 dbTotalSum = 11;
                 nSum = 2;
-                ptHDNum.innerHTML = '<b>11/2</b>';
+                cptHDNum.innerHTML = '<b>11/2</b>';
             } else if (nSum === 22) {
                 dbTotalSum = 22;
                 nSum = 4;
-                ptHDNum.innerHTML = '<b>' + nSum + '</b>';
+                cptHDNum.innerHTML = '<b>' + nSum + '</b>';
             } else if (nSum === 33) {
                 dbTotalSum = 33;
                 nSum = 6;
-                ptHDNum.innerHTML = '<b>' + nSum + ' </b>';
+                cptHDNum.innerHTML = '<b>' + nSum + ' </b>';
             } else if (nSum > 10) {
                 dbTotalSum = nSum;
                 dbSplit = String(dbTotalSum).split('');
                 nSum = eval(dbSplit.join('+'));
-                ptHDNum.innerHTML = '<b>' + nSum + ' </b>';
+                cptHDNum.innerHTML = '<b>' + nSum + ' </b>';
             }
         }
     };
 
     // Partner personality number 
-    pnfName = pfName.value.split(' ');
+    pnfName = fpfName.value.split(' ');
     count = 0;
     countList = [], countHold = 0;
     pnfName = Array.from(pnfName);
@@ -1378,85 +1378,85 @@ document.getElementById('match').addEventListener('click', ()=> {
     count = countHold;
     if (count < 10) {
         count;
-        ptPNum.innerHTML = '<b>' + count + '</b>' ;
+        cptPNum.innerHTML = '<b>' + count + '</b>' ;
     } else if (count == 10) {
         count = 1;
-        ptPNum.innerHTML = '<b>1</b>' ;
+        cptPNum.innerHTML = '<b>1</b>' ;
     } else if (count == 11) {
         count = 11;
-        ptPNum.innerHTML = '<b>11/2</b>' ;
+        cptPNum.innerHTML = '<b>11/2</b>' ;
     }  else if ( count === 22 || count === 33) {
         count;
         pnSplit = String(count).split('');
         sum = eval(pnSplit.join('+'));
-        ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
     } else if ( count === 13) {
         count = 13;
         sum = 4;
-        ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
     } else if ( count === 14) {
         count = 14;
         sum = 5;
-        ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
     } else if ( count === 16) {
         count = 16;
         sum = 7;
-        ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
     } else if ( count === 19) {
         count = 19;
         sum = 1;
-        ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
     } else if (count > 10) {
         pnSplit = String(count).split('');
         sum = eval(pnSplit.join('+'));
-        ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+        cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
         count = sum
 
         if (count < 10) {
             count;
-            ptPNum.innerHTML = '<b>' + count + '</b>' ;
+            cptPNum.innerHTML = '<b>' + count + '</b>' ;
         } else if (count == 10) {
             count = 1;
-            ptPNum.innerHTML = '<b>1</b>' ;
+            cptPNum.innerHTML = '<b>1</b>' ;
         } else if (count == 11) {
             count = 1;
-            ptPNum.innerHTML = '<b>11/2</b>' ;
+            cptPNum.innerHTML = '<b>11/2</b>' ;
         } else if (count === 11 || count === 22 || count === 33) {
             count;
             pnSplit = String(count).split('');
             sum = eval(pnSplit.join('+'));
-            ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
         } else if ( count === 13) {
             count = 13;
             sum = 4;
-            ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
         } else if ( count === 14) {
             count = 14;
             sum = 5;
-            ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
         } else if ( count === 16) {
             count = 16;
             sum = 7;
-            ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
         } else if ( count === 19) {
             count = 19;
             sum = 1;
-            ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
         } else if (count > 10) {
             pnSplit = String(count).split('');
             sum = eval(pnSplit.join('+'));
-            ptPNum.innerHTML = '<b>' +sum+ '</b>' ;
+            cptPNum.innerHTML = '<b>' +sum+ '</b>' ;
             count = sum
         }
     };
 
     // Partner Maturity Number 
-    var lifePath = ((ptLPNum.textContent).trim()).split('/');
+    var lifePath = ((cptLPNum.textContent).trim()).split('/');
     lpHold = Number(lifePath[lifePath.length - 1]);
     mSplit = String(lpHold).split('');
     lpHold = eval(mSplit.join('+'));
     
-    var expPath = ((ptEPNum.textContent).trim()).split('/');
+    var expPath = ((cptEPNum.textContent).trim()).split('/');
     edHold = Number(expPath[expPath.length - 1])
     mSplit = String(edHold).split('');
     edHold = eval(mSplit.join('+'));
@@ -1513,14 +1513,14 @@ document.getElementById('match').addEventListener('click', ()=> {
 
 
     // lifePath 1 comparism #F27121
-    var ylpnum = Number(ytLPNum.textContent);
-    var plnum = Number(ptLPNum.textContent);
+    var ylpnum = Number(cytLPNum.textContent);
+    var plnum = Number(cptLPNum.textContent);
 
     if (ylpnum === 1) {
-        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9 || ptLPNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7  || cptLPNum.textContent === '11/2') {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
-        } else if (plnum === 2 || plnum === 6 ) {
+        } else if (plnum === 2 || plnum === 6 || plnum === 9) {
             lpComp.textContent = 'Good';
             lpComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
@@ -1528,7 +1528,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 2) {
-        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptLPNum.textContent === '11/2') {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || cptLPNum.textContent === '11/2') {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -1539,21 +1539,21 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 3) {
-        if (plnum === 3 || plnum === 6 || plnum === 9 || ptLPNum.textContent === '11/2' ) {
+        if (plnum === 3 || plnum === 6 || plnum === 9  ) {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             lpComp.textContent = 'Good';
             lpComp.style.color = '#F8DE22'
-        } else if (plnum === 4 || plnum === 8 ) {
+        } else if (plnum === 4 || plnum === 8 || cptLPNum.textContent === '11/2') {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 4) {
-        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptLPNum.textContent === '11/2' ) {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8  ) {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
-        } else if (plnum === 7 ) {
+        } else if (plnum === 7 || cptLPNum.textContent === '11/2') {
             lpComp.textContent = 'Good';
             lpComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
@@ -1561,7 +1561,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 5) {
-        if (plnum === 1 || plnum === 5 || plnum === 7  || ptLPNum.textContent === '11/2' ) {
+        if (plnum === 1 || plnum === 5 || plnum === 7  || cptLPNum.textContent === '11/2' ) {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
@@ -1572,10 +1572,10 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#F27121'
         } 
     }  else if (ylpnum === 6) {
-        if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9 || ptLPNum.textContent === '11/2' ) {
+        if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9  ) {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
-        } else if (plnum === 1 || plnum === 8  ) {
+        } else if (plnum === 1 || plnum === 8  || cptLPNum.textContent === '11/2') {
             lpComp.textContent = 'Good';
             lpComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
@@ -1583,7 +1583,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 7) {
-        if (plnum === 1 || plnum === 5 || plnum === 7  || ptLPNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 5 || plnum === 7  || cptLPNum.textContent === '11/2') {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
@@ -1594,10 +1594,10 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 8) {
-        if (plnum === 2 || plnum === 4 || plnum === 8 || ptLPNum.textContent === '11/2') {
+        if (plnum === 2 || plnum === 4 || plnum === 8  ) {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6 || plnum === 7) {
+        } else if (plnum === 5 || plnum === 6 || plnum === 7 || cptLPNum.textContent === '11/2') {
             lpComp.textContent = 'Good';
             lpComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -1605,7 +1605,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 9) {
-        if (plnum === 3 || plnum === 6 || plnum === 9 || ptLPNum.textContent === '11/2') {
+        if (plnum === 3 || plnum === 6 || plnum === 9 || cptLPNum.textContent === '11/2') {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
@@ -1615,8 +1615,8 @@ document.getElementById('match').addEventListener('click', ()=> {
             lpComp.textContent = 'Challenge';
             lpComp.style.color = '#F27121'
         } 
-    } else if (ytLPNum.textContent === '11/2') {
-        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptLPNum.textContent === '11/2') {
+    } else if (cytLPNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || cptLPNum.textContent === '11/2') {
             lpComp.textContent = 'Perfect';
             lpComp.style.color = '#05D087'
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
@@ -1629,14 +1629,14 @@ document.getElementById('match').addEventListener('click', ()=> {
     };
 
     // Birthday Comparism 
-    var ylpnum = Number(ytBDNum.textContent);
-    var plnum = Number(ptBDNum.textContent);
+    var ylpnum = Number(cytBDNum.textContent);
+    var plnum = Number(cptBDNum.textContent);
 
     if (ylpnum === 1) {
-        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9 || ptBDNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || cptBDNum.textContent === '11/2') {
             bdComp.textContent = 'Perfect';
             bdComp.style.color = '#05D087'
-        } else if (plnum === 2 || plnum === 6 ) {
+        } else if (plnum === 2 || plnum === 6 || plnum === 9 ) {
             bdComp.textContent = 'Good';
             bdComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
@@ -1644,7 +1644,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 2) {
-        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptBDNum.textContent === '11/2') {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || cptBDNum.textContent === '11/2') {
             bdComp.textContent = 'Perfect';
             bdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -1661,7 +1661,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             bdComp.textContent = 'Good';
             bdComp.style.color = '#F8DE22'
-        } else if (plnum === 4 || plnum === 8 || ptBDNum.textContent === '11/2' ) {
+        } else if (plnum === 4 || plnum === 8 || cptBDNum.textContent === '11/2' ) {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
         } 
@@ -1669,7 +1669,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 ) {
             bdComp.textContent = 'Perfect';
             bdComp.style.color = '#05D087'
-        } else if (plnum === 7 || ptBDNum.textContent === '11/2' ) {
+        } else if (plnum === 7 || cptBDNum.textContent === '11/2' ) {
             bdComp.textContent = 'Good';
             bdComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
@@ -1677,7 +1677,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 5) {
-        if (plnum === 1 || plnum === 5 || plnum === 7 || ptBDNum.textContent === '11/2' ) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || cptBDNum.textContent === '11/2' ) {
             bdComp.textContent = 'Perfect';
             bdComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
@@ -1691,7 +1691,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9 ) {
             bdComp.textContent = 'Perfect';
             bdComp.style.color = '#05D087'
-        } else if (plnum === 1 || plnum === 8  || ptBDNum.textContent === '11/2' ) {
+        } else if (plnum === 1 || plnum === 8  || cptBDNum.textContent === '11/2' ) {
             bdComp.textContent = 'Good';
             bdComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
@@ -1699,7 +1699,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 7) {
-        if (plnum === 1 || plnum === 5 || plnum === 7 || ptBDNum.textContent === '11/2' ) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || cptBDNum.textContent === '11/2' ) {
             bdComp.textContent = 'Perfect';
             bdComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
@@ -1713,7 +1713,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             bdComp.textContent = 'Perfect';
             bdComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6 || plnum === 7 || ptBDNum.textContent === '11/2') {
+        } else if (plnum === 5 || plnum === 6 || plnum === 7 || cptBDNum.textContent === '11/2') {
             bdComp.textContent = 'Good';
             bdComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -1721,7 +1721,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 9) {
-        if (plnum === 3 || plnum === 6 || plnum === 9 || ptBDNum.textContent === '11/2') {
+        if (plnum === 3 || plnum === 6 || plnum === 9 || cptBDNum.textContent === '11/2') {
             bdComp.textContent = 'Perfect';
             bdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
@@ -1731,8 +1731,8 @@ document.getElementById('match').addEventListener('click', ()=> {
             bdComp.textContent = 'Challenge';
             bdComp.style.color = '#F27121'
         } 
-    } else if (ytBDNum.textContent === '11/2') {
-        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptBDNum.textContent === '11/2') {
+    } else if (cytBDNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || cptBDNum.textContent === '11/2') {
             bdComp.textContent = 'Perfect';
             bdComp.style.color = '#05D087'
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
@@ -1745,14 +1745,14 @@ document.getElementById('match').addEventListener('click', ()=> {
     };
 
     // Expression Compatiility 
-    var ylpnum = Number(ytEPNum.textContent);
-    var plnum = Number(ptEPNum.textContent);
+    var ylpnum = Number(cytEPNum.textContent);
+    var plnum = Number(cptEPNum.textContent);
 
     if (ylpnum === 1) {
-        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9 || ptEPNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7  || cptEPNum.textContent === '11/2') {
             expComp.textContent = 'Perfect';
             expComp.style.color = '#05D087'
-        } else if (plnum === 2 || plnum === 6 ) {
+        } else if (plnum === 2 || plnum === 6 || plnum === 9) {
             expComp.textContent = 'Good';
             expComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
@@ -1760,7 +1760,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 2) {
-        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptEPNum.textContent === '11/2') {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || cptEPNum.textContent === '11/2') {
             expComp.textContent = 'Perfect';
             expComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -1777,7 +1777,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             expComp.textContent = 'Good';
             expComp.style.color = '#F8DE22'
-        } else if (plnum === 4 || plnum === 8 || ptEPNum.textContent === '11/2') {
+        } else if (plnum === 4 || plnum === 8 || cptEPNum.textContent === '11/2') {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
         } 
@@ -1785,7 +1785,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 ) {
             expComp.textContent = 'Perfect';
             expComp.style.color = '#05D087'
-        } else if (plnum === 7 || ptEPNum.textContent === '11/2') {
+        } else if (plnum === 7 || cptEPNum.textContent === '11/2') {
             expComp.textContent = 'Good';
             expComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
@@ -1793,7 +1793,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 5) {
-        if (plnum === 1 || plnum === 5 || plnum === 7 || ptEPNum.textContent === '11/2' ) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || cptEPNum.textContent === '11/2' ) {
             expComp.textContent = 'Perfect';
             expComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
@@ -1807,7 +1807,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9 ) {
             expComp.textContent = 'Perfect';
             expComp.style.color = '#05D087'
-        } else if (plnum === 1 || plnum === 8 || ptEPNum.textContent === '11/2' ) {
+        } else if (plnum === 1 || plnum === 8 || cptEPNum.textContent === '11/2' ) {
             expComp.textContent = 'Good';
             expComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
@@ -1815,7 +1815,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 7) {
-        if (plnum === 1 || plnum === 5 || plnum === 7 || ptEPNum.textContent === '11/2' ) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || cptEPNum.textContent === '11/2' ) {
             expComp.textContent = 'Perfect';
             expComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
@@ -1829,7 +1829,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             expComp.textContent = 'Perfect';
             expComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6 || plnum === 7 || ptEPNum.textContent === '11/2') {
+        } else if (plnum === 5 || plnum === 6 || plnum === 7 || cptEPNum.textContent === '11/2') {
             expComp.textContent = 'Good';
             expComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -1837,7 +1837,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 9) {
-        if (plnum === 3 || plnum === 6 || plnum === 9 || ptEPNum.textContent === '11/2') {
+        if (plnum === 3 || plnum === 6 || plnum === 9 || cptEPNum.textContent === '11/2') {
             expComp.textContent = 'Perfect';
             expComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
@@ -1847,10 +1847,10 @@ document.getElementById('match').addEventListener('click', ()=> {
             expComp.textContent = 'Challenge';
             expComp.style.color = '#F27121'
         } 
-    } else if (ytEPNum.textContent === '11/2') {
-        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptEPNum.textContent === '11/2') {
+    } else if (cytEPNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || cptEPNum.textContent === '11/2') {
             expComp.textContent = 'Perfect';
-            expComp.style.color = '#05D087'
+            expComp.style.color = '#05D087';
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
             expComp.textContent = 'Good';
             expComp.style.color = '#F8DE22'
@@ -1861,14 +1861,14 @@ document.getElementById('match').addEventListener('click', ()=> {
     };
 
     // Heart's desire Compatibility 
-    var ylpnum = Number(ytHDNum.textContent);
-    var plnum = Number(ptHDNum.textContent);
+    var ylpnum = Number(cytHDNum.textContent);
+    var plnum = Number(cptHDNum.textContent);
 
     if (ylpnum === 1) {
-        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9  || ptHDNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7   || cptHDNum.textContent === '11/2') {
             hdComp.textContent = 'Perfect';
             hdComp.style.color = '#05D087'
-        } else if (plnum === 2 || plnum === 6 ) {
+        } else if (plnum === 2 || plnum === 6 || plnum === 9) {
             hdComp.textContent = 'Good';
             hdComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
@@ -1876,7 +1876,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 2) {
-        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8  || ptHDNum.textContent === '11/2') {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8  || cptHDNum.textContent === '11/2') {
             hdComp.textContent = 'Perfect';
             hdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -1893,7 +1893,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             hdComp.textContent = 'Good';
             hdComp.style.color = '#F8DE22'
-        } else if (plnum === 4 || plnum === 8 || ptHDNum.textContent === '11/2' ) {
+        } else if (plnum === 4 || plnum === 8 || cptHDNum.textContent === '11/2' ) {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
         } 
@@ -1901,7 +1901,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8  ) {
             hdComp.textContent = 'Perfect';
             hdComp.style.color = '#05D087'
-        } else if (plnum === 7 || ptHDNum.textContent === '11/2') {
+        } else if (plnum === 7 || cptHDNum.textContent === '11/2') {
             hdComp.textContent = 'Good';
             hdComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
@@ -1909,7 +1909,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 5) {
-        if (plnum === 1 || plnum === 5 || plnum === 7  || ptHDNum.textContent === '11/2' ) {
+        if (plnum === 1 || plnum === 5 || plnum === 7  || cptHDNum.textContent === '11/2' ) {
             hdComp.textContent = 'Perfect';
             hdComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
@@ -1923,7 +1923,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9  ) {
             hdComp.textContent = 'Perfect';
             hdComp.style.color = '#05D087'
-        } else if (plnum === 1 || plnum === 8 || ptHDNum.textContent === '11/2' ) {
+        } else if (plnum === 1 || plnum === 8 || cptHDNum.textContent === '11/2' ) {
             hdComp.textContent = 'Good';
             hdComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
@@ -1931,7 +1931,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 7) {
-        if (plnum === 1 || plnum === 5 || plnum === 7   || ptHDNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 5 || plnum === 7   || cptHDNum.textContent === '11/2') {
             hdComp.textContent = 'Perfect';
             hdComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
@@ -1945,7 +1945,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 8   ) {
             hdComp.textContent = 'Perfect';
             hdComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6  || plnum === 7 ||  ptHDNum.textContent === '11/2') {
+        } else if (plnum === 5 || plnum === 6  || plnum === 7 ||  cptHDNum.textContent === '11/2') {
             hdComp.textContent = 'Good';
             hdComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -1953,7 +1953,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 9) {
-        if (plnum === 3 || plnum === 6 || plnum === 9  || ptHDNum.textContent === '11/2') {
+        if (plnum === 3 || plnum === 6 || plnum === 9  || cptHDNum.textContent === '11/2') {
             hdComp.textContent = 'Perfect';
             hdComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
@@ -1963,8 +1963,8 @@ document.getElementById('match').addEventListener('click', ()=> {
             hdComp.textContent = 'Challenge';
             hdComp.style.color = '#F27121'
         } 
-    } else if (ytHDNum.textContent === '11/2') {
-        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptHDNum.textContent === '11/2') {
+    } else if (cytHDNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || cptHDNum.textContent === '11/2') {
             hdComp.textContent = 'Perfect';
             hdComp.style.color = '#05D087'
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
@@ -1977,14 +1977,14 @@ document.getElementById('match').addEventListener('click', ()=> {
     };
 
     // Personality Compatibilty 
-    var ylpnum = Number(ytPNum.textContent);
-    var plnum = Number(ptPNum.textContent);
+    var ylpnum = Number(cytPNum.textContent);
+    var plnum = Number(cptPNum.textContent);
 
     if (ylpnum === 1) {
-        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9 || ptPNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 ||  cptPNum.textContent === '11/2') {
             pComp.textContent = 'Perfect';
             pComp.style.color = '#05D087'
-        } else if (plnum === 2 || plnum === 6 ) {
+        } else if (plnum === 2 || plnum === 6 || plnum === 9) {
             pComp.textContent = 'Good';
             pComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
@@ -1992,7 +1992,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 2) {
-        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || ptPNum.textContent === '11/2') {
+        if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 || cptPNum.textContent === '11/2') {
             pComp.textContent = 'Perfect';
             pComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -2009,7 +2009,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         } else if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 ) {
             pComp.textContent = 'Good';
             pComp.style.color = '#F8DE22'
-        } else if (plnum === 4 || plnum === 8 || ptPNum.textContent === '11/2') {
+        } else if (plnum === 4 || plnum === 8 || cptPNum.textContent === '11/2') {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
         } 
@@ -2017,7 +2017,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 6 || plnum === 8 ) {
             pComp.textContent = 'Perfect';
             pComp.style.color = '#05D087'
-        } else if (plnum === 7 || ptPNum.textContent === '11/2' ) {
+        } else if (plnum === 7 || cptPNum.textContent === '11/2' ) {
             pComp.textContent = 'Good';
             pComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 9 ) {
@@ -2025,7 +2025,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 5) {
-        if (plnum === 1 || plnum === 5 || plnum === 7 || ptPNum.textContent === '11/2' ) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || cptPNum.textContent === '11/2' ) {
             pComp.textContent = 'Perfect';
             pComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 8 || plnum === 9 ) {
@@ -2039,7 +2039,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 3 || plnum === 4 || plnum === 6 || plnum === 9 ) {
             pComp.textContent = 'Perfect';
             pComp.style.color = '#05D087'
-        } else if (plnum === 1 || plnum === 8  || ptPNum.textContent === '11/2') {
+        } else if (plnum === 1 || plnum === 8  || cptPNum.textContent === '11/2') {
             pComp.textContent = 'Good';
             pComp.style.color = '#F8DE22'
         } else if (plnum === 5 || plnum === 7 ) {
@@ -2047,7 +2047,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 7) {
-        if (plnum === 1 || plnum === 5 || plnum === 7 || ptPNum.textContent === '11/2' ) {
+        if (plnum === 1 || plnum === 5 || plnum === 7 || cptPNum.textContent === '11/2' ) {
             pComp.textContent = 'Perfect';
             pComp.style.color = '#05D087'
         } else if (plnum === 3 || plnum === 4 || plnum === 8 || plnum === 9 ) {
@@ -2061,7 +2061,7 @@ document.getElementById('match').addEventListener('click', ()=> {
         if (plnum === 2 || plnum === 4 || plnum === 8 ) {
             pComp.textContent = 'Perfect';
             pComp.style.color = '#05D087'
-        } else if (plnum === 5 || plnum === 6 || plnum === 7 || ptPNum.textContent === '11/2') {
+        } else if (plnum === 5 || plnum === 6 || plnum === 7 || cptPNum.textContent === '11/2') {
             pComp.textContent = 'Good';
             pComp.style.color = '#F8DE22'
         } else if (plnum === 1 || plnum === 3 || plnum === 9 ) {
@@ -2069,7 +2069,7 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.style.color = '#F27121'
         } 
     } else if (ylpnum === 9) {
-        if (plnum === 3 || plnum === 6 || plnum === 9 || ptPNum.textContent === '11/2') {
+        if (plnum === 3 || plnum === 6 || plnum === 9 || cptPNum.textContent === '11/2') {
             pComp.textContent = 'Perfect';
             pComp.style.color = '#05D087'
         } else if (plnum === 1 || plnum === 5 || plnum === 7) {
@@ -2079,8 +2079,8 @@ document.getElementById('match').addEventListener('click', ()=> {
             pComp.textContent = 'Challenge';
             pComp.style.color = '#F27121'
         } 
-    } else if (ytPNum.textContent === '11/2') {
-        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || ptPNum.textContent === '11/2') {
+    } else if (cytPNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 2 || plnum === 5 || plnum === 7 || plnum === 9 || cptPNum.textContent === '11/2') {
             pComp.textContent = 'Perfect';
             pComp.style.color = '#05D087'
         } else if (plnum === 4 || plnum === 6 || plnum === 8) {
@@ -2097,10 +2097,10 @@ document.getElementById('match').addEventListener('click', ()=> {
     var plnum = Number(ptMNum.textContent);
 
     if (ylpnum === 1) {
-        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7 || plnum === 9 || ptMNum.textContent === '11/2') {
+        if (plnum === 1 || plnum === 3 || plnum === 5 || plnum === 7  || ptMNum.textContent === '11/2') {
             mComp.textContent = 'Perfect';
             mComp.style.color = '#05D087'
-        } else if (plnum === 2 || plnum === 6 ) {
+        } else if (plnum === 2 || plnum === 6 || plnum === 9) {
             mComp.textContent = 'Good';
             mComp.style.color = '#F8DE22'
         } else if (plnum === 4 || plnum === 8 ) {
@@ -2210,9 +2210,9 @@ document.getElementById('match').addEventListener('click', ()=> {
 
     var p = 0;
 
-    var ylpnumP = ((ytLPNum.textContent).trim()).split('/');
+    var ylpnumP = ((cytLPNum.textContent).trim()).split('/');
     ylpnumP = ylpnumP[ylpnumP.length - 1];
-    var plpnumP = ((ptLPNum.textContent).trim()).split('/');
+    var plpnumP = ((cptLPNum.textContent).trim()).split('/');
     plpnumP = plpnumP[plpnumP.length - 1];
 
     if (lpComp.style.color === 'rgb(5, 208, 135)' & ylpnumP === plpnumP) {
@@ -2226,9 +2226,9 @@ document.getElementById('match').addEventListener('click', ()=> {
     }
 
 
-    var ylpnumP = ((ytBDNum.textContent).trim()).split('/');
+    var ylpnumP = ((cytBDNum.textContent).trim()).split('/');
     ylpnumP = ylpnumP[ylpnumP.length - 1];
-    var plpnumP = ((ptBDNum.textContent).trim()).split('/');
+    var plpnumP = ((cptBDNum.textContent).trim()).split('/');
     plpnumP = plpnumP[plpnumP.length - 1];
 
     if (bdComp.style.color === 'rgb(5, 208, 135)' & ylpnumP === plpnumP) {
@@ -2241,9 +2241,9 @@ document.getElementById('match').addEventListener('click', ()=> {
         p+= 70
     } 
 
-    var ylpnumP = ((ytEPNum.textContent).trim()).split('/');
+    var ylpnumP = ((cytEPNum.textContent).trim()).split('/');
     ylpnumP = ylpnumP[ylpnumP.length - 1];
-    var plpnumP = ((ptEPNum.textContent).trim()).split('/');
+    var plpnumP = ((cptEPNum.textContent).trim()).split('/');
     plpnumP = plpnumP[plpnumP.length - 1];
 
     if (expComp.style.color === 'rgb(5, 208, 135)' & ylpnumP === plpnumP) {
@@ -2256,9 +2256,9 @@ document.getElementById('match').addEventListener('click', ()=> {
         p+= 70
     }
 
-    var ylpnumP = ((ytHDNum.textContent).trim()).split('/');
+    var ylpnumP = ((cytHDNum.textContent).trim()).split('/');
     ylpnumP = ylpnumP[ylpnumP.length - 1];
-    var plpnumP = ((ptHDNum.textContent).trim()).split('/');
+    var plpnumP = ((cptHDNum.textContent).trim()).split('/');
     plpnumP = plpnumP[plpnumP.length - 1];
 
     if (hdComp.style.color === 'rgb(5, 208, 135)' & ylpnumP === plpnumP) {
@@ -2271,9 +2271,9 @@ document.getElementById('match').addEventListener('click', ()=> {
         p+= 70
     }
 
-    var ylpnumP = ((ytPNum.textContent).trim()).split('/');
+    var ylpnumP = ((cytPNum.textContent).trim()).split('/');
     ylpnumP = ylpnumP[ylpnumP.length - 1];
-    var plpnumP = ((ptPNum.textContent).trim()).split('/');
+    var plpnumP = ((cptPNum.textContent).trim()).split('/');
     plpnumP = plpnumP[plpnumP.length - 1];
 
     if (pComp.style.color === 'rgb(5, 208, 135)' & ylpnumP === plpnumP) {
@@ -2302,7 +2302,7 @@ document.getElementById('match').addEventListener('click', ()=> {
     }
 
     var per = parseInt(p/6);
-    percent.textContent = per+'%';
+    cpercent.textContent = per+'%';
     
     
 

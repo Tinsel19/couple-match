@@ -24,12 +24,12 @@
 
                 <div class="styled-input">
                     <span class="span">Your Full Name at Birth</span>
-                    <input type="text" id="yfName" placeholder="Your first, middle & last name" required>
+                    <input type="text" id="fyfName" placeholder="Your first, middle & last name" required>
                 </div>
 
                 <span class="span">Your Date of Birth</span>
 
-                <select  id="yMonth" required>
+                <select  id="cyMonth" required>
                     <option value="1">January</option>
                     <option value="2">February</option>
                     <option value="3">March</option>
@@ -44,7 +44,7 @@
                     <option value="12">December</option>
                 </select>
 
-                <select  id="yDay" required>
+                <select  id="cyDay" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -78,18 +78,18 @@
                     <option value="31">31</option>
                 </select>
 
-                <input type="number" id="yYear" placeholder="year"  required>
+                <input type="number" id="cfyYear" placeholder="year"  required>
             </div>
 
             <div class="div">
                 <div class="styled-input">
                     <span class="span">Partner's Full Name at Birth</span>
-                    <input type="text" id="pfName" placeholder="first, middle & last name" required>
+                    <input type="text" id="fpfName" placeholder="Partner first, middle & last name" required>
                 </div>
                 
                 <span class="span">Partner's Date of Birth</span>
                 
-                <select  id="pMonth" required>
+                <select  id="cpMonth" required>
                     <option value="1">January</option>
                     <option value="2">February</option>
                     <option value="3">March</option>
@@ -104,7 +104,7 @@
                     <option value="12">December</option>
                 </select>
 
-                <select  id="pDay" required>
+                <select  id="cpDay" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -138,7 +138,7 @@
                     <option value="31">31</option>
                 </select>
 
-                <input type="number" id="pYear" placeholder="year"  required>
+                <input type="number" id="cfpYear" placeholder="year"  required>
             </div>
         </form>
 
@@ -147,46 +147,46 @@
 
 
 
-        <section class="white" id="hide">
+        <section class="white" id="hider">
             <div class="orangeBcg" >
-                <p id="ytName"><br></p>
-                <p class="red-bcg" id="ptName"><br></p>
-                <p >Compatibility</p>
+                <p id="cytName"><br></p>
+                <p class="red-bcg" id="cptName"><br></p>
+                <p >Numerology Compatibility</p>
             </div>
             
             <div class="flex">
-                <p class="orange-text">Life Path <span id="ytLPNum"></span> </p>
-                <p class="box-text middle"> <span id="ptLPNum"></span> Life Path</p>
+                <p class="orange-text">Life Path <span id="cytLPNum"></span> </p>
+                <p class="box-text middle" id="middlec"> <span id="cptLPNum"></span> Life Path</p>
                 <p class="orange" id="lpComp">Challenge</p>
             </div>
     
             <div class="flex">
-                <p class="orange-text">Birthday <span id="ytBDNum"></span> </p>
-                <p class="box-text middle"> <span id="ptBDNum"></span> Birthday</p>
+                <p class="orange-text">Birthday <span id="cytBDNum"></span> </p>
+                <p class="box-text middle" id="middlec"> <span id="cptBDNum"></span> Birthday</p>
                 <p  class="orange" id="bdComp">Challenge</p>
             </div>
     
             <div class="flex">
-                <p class="orange-text">Expression <span id="ytEPNum"></span> </p>
-                <p class="box-text middle"> <span id="ptEPNum"></span> Expression</p>
+                <p class="orange-text">Expression/ Destiny <span id="cytEPNum"></span> </p>
+                <p class="box-text middle" id="middlec"> <span id="cptEPNum"></span>Expression/ Destiny</p>
                 <p class="green" id="expComp">Perfect</p>
             </div>
     
             <div class="flex">
-                <p class="orange-text">Heart's Desire <span id="ytHDNum"></span> </p>
-                <p class="box-text middle"> <span id="ptHDNum"></span> Heart's Desire</p>
+                <p class="orange-text">Heart's Desire/ Soul Urg<span id="cytHDNum"></span> </p>
+                <p class="box-text middle" id="middlec"> <span id="cptHDNum"></span> Heart's Desire/ Soul Urge</p>
                 <p class="green" id="hdComp">Perfect</p>
             </div>
     
             <div class="flex">
-                <p class="orange-text">Personality <span id="ytPNum"></span> </p>
-                <p class="box-text middle"> <span id="ptPNum"></span> Personality</p>
+                <p class="orange-text">Personality <span id="cytPNum"></span> </p>
+                <p class="box-text middle" id="middlec"> <span id="cptPNum"></span> Personality</p>
                 <p class="orange" id="pComp">Challenge</p>
             </div>
     
             <div class="flex">
-                <p class="orange-text">Maturity <span id="ytMNum"></span> </p>
-                <p class="box-text middle"> <span id="ptMNum"></span> Maturity</p>
+                <p class="orange-text">Maturity <span id="cytMNum"></span> </p>
+                <p class="box-text middle" id="middlec"> <span id="cptMNum"></span> Maturity</p>
                 <p class="green" id="mComp">Perfect </p>
             </div>
             
@@ -194,9 +194,9 @@
         
 
         
-        <h2 class="hide" id="show">Overall Match: <span class="green" id="percent">85%</span></h2>
-        <div class="btn">
-            <button id="match">💕 Match Now 💕</button>
+        <h2 class="hide" id="show"><b>Overall Match: <span class="green" id="cpercent">85%</span></b></h2>
+        <div id="cbtn">
+            <button id="matchCoup">💕 Match Now 💕</button>
         </div>
         
     </section>
