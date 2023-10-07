@@ -243,13 +243,13 @@ document.getElementById('matchCoup').addEventListener('click', ()=> {
     } else if (xSum === 10) {
         sumDayArray = 1;
     } else if (xSum === 13) {
-        sumDayArray = '4';
+        sumDayArray = 4;
     } else if (xSum === 14) {
         sumDayArray = '5';
     }else if (xSum === 16) {
-        sumDayArray = '7';
+        sumDayArray = 7;
     } else if (xSum === 19) {
-        sumDayArray = '1';
+        sumDayArray = 1;
     } else if (xSum === 11) {
         sumDayArray = '11/2';
         xSum = '11/2'
@@ -262,13 +262,13 @@ document.getElementById('matchCoup').addEventListener('click', ()=> {
         } else if (xSum === 10) {
             xSum = 1
         } else if (xSum === 13) {
-            xSum = '4';
+            xSum = 4;
         } else if (xSum === 14) {
-            xSum = '5';
+            xSum = 5;
         }else if (xSum === 16) {
-            xSum = '7';
+            xSum = 7;
         } else if (xSum === 19) {
-            xSum = '1';
+            xSum = 1;
         } else if (xSum === 11) {
             xSum = '11/2';
         } else if (xSum > 10) {
@@ -978,15 +978,15 @@ document.getElementById('matchCoup').addEventListener('click', ()=> {
     } else if (xSum === 10) {
         sumDayArray = 1;
     } else if (xSum === 13) {
-        sumDayArray = '4';
+        sumDayArray = 4;
     } else if (xSum === 14) {
-        sumDayArray = '5';
+        sumDayArray = 5;
     }else if (xSum === 16) {
-        sumDayArray = '7';
+        sumDayArray = 7;
     } else if (xSum === 11) {
         sumDayArray = '11/2';
     } else if (xSum === 19) {
-        sumDayArray = '1';
+        sumDayArray = 1;
     } else if (xSum > 10) {
         mSplit = String(xSum).split('');
         xSum = eval(mSplit.join('+'));
@@ -998,13 +998,13 @@ document.getElementById('matchCoup').addEventListener('click', ()=> {
         } else if (xSum === 11) {
             xSum = '11/2'
         } else if (xSum === 13) {
-            xSum = '4';
+            xSum = 4;
         } else if (xSum === 14) {
-            xSum = '5';
+            xSum = 5;
         }else if (xSum === 16) {
-            xSum = '7';
+            xSum = 7;
         } else if (xSum === 19) {
-            xSum = '1';
+            xSum = 1;
         } else if (xSum > 10) {
             mSplit = String(xSum).split('');
             xSum = eval(mSplit.join('+'));
